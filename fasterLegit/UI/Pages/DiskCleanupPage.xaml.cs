@@ -1,0 +1,17 @@
+﻿using fasterLegit.UI.ViewModels.Pages;
+using Wpf.Ui.Abstractions.Controls;
+
+namespace fasterLegit.UI.Pages;
+
+public partial class DiskCleanupPage : INavigableView<DiskCleanupViewModel>
+{
+    public DiskCleanupPage(DiskCleanupViewModel viewModel)
+    {
+        ViewModel = viewModel;
+        DataContext = this;
+
+        InitializeComponent();
+    }
+
+    public DiskCleanupViewModel ViewModel { get; }
+}

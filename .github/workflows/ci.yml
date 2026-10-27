@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+          cache: true
+          cache-dependency-path: |
+            fasterLegit/fasterLegit.csproj
+            fasterLegit.Test/fasterLegit.Test.csproj
+
+      - name: Restore
+        run: dotnet restore fasterLegit.slnx
+
+      - name: Build
+        run: dotnet build fasterLegit.slnx --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet run --project fasterLegit.Test/fasterLegit.Test.csproj --configuration Release --no-build -- -longRunning 30
+
+      - name: Format check
+        run: |
+          dotnet tool install --global csharpier --version 1.3.0
+          csharpier check .

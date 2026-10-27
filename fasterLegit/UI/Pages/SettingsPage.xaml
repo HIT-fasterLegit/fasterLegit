@@ -1,0 +1,105 @@
+<Page
+    x:Class="fasterLegit.UI.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:fasterLegit.Common.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ext="clr-namespace:fasterLegit.Common.Extensions"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:fasterLegit.UI.Pages"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="SettingsPage"
+    d:DataContext="{d:DesignInstance pages:SettingsPage}"
+    d:DesignHeight="1200"
+    d:DesignWidth="800"
+    ui:Design.Background="Black"
+    ui:Design.Foreground="White"
+    Style="{StaticResource PageRootStyle}"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <converters:ThemeToIndexConverter x:Key="ThemeToIndexConverter" />
+    </Page.Resources>
+
+    <ScrollViewer>
+        <StackPanel>
+            <ui:TextBlock Style="{StaticResource PageTitleStyle}" Text="{ext:Loc Settings.Header.Title}" />
+
+            <StackPanel Style="{StaticResource SettingsSectionStyle}">
+                <ui:TextBlock Style="{StaticResource SectionHeaderStyle}" Text="{ext:Loc Settings.Appearance.Header}" />
+                <ui:CardControl Margin="0,0,0,4" Icon="{ui:SymbolIcon Color24}">
+                    <ui:CardControl.Header>
+                        <StackPanel>
+                            <ui:TextBlock
+                                Margin="0"
+                                FontTypography="BodyStrong"
+                                Text="{ext:Loc Settings.Appearance.ThemeSelector.Title}"
+                                TextWrapping="Wrap" />
+                            <ui:TextBlock
+                                Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                                Text="{ext:Loc Settings.Appearance.ThemeSelector.Description}"
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                    </ui:CardControl.Header>
+                    <ComboBox SelectedIndex="{Binding ViewModel.CurrentApplicationTheme, Converter={StaticResource ThemeToIndexConverter}, Mode=TwoWay}">
+                        <ComboBoxItem Content="{ext:Loc Settings.Appearance.ThemeSelector.Light}" />
+                        <ComboBoxItem Content="{ext:Loc Settings.Appearance.ThemeSelector.Dark}" />
+                        <ComboBoxItem Content="{ext:Loc Settings.Appearance.ThemeSelector.HighContrast}" />
+                    </ComboBox>
+                </ui:CardControl>
+
+                <ui:CardControl Margin="0,0,0,4" Icon="{ui:SymbolIcon PhoneVerticalScroll24}">
+                    <ui:CardControl.Header>
+                        <StackPanel>
+                            <ui:TextBlock
+                                Margin="0"
+                                FontTypography="BodyStrong"
+                                Text="{ext:Loc Settings.Appearance.SmoothScrolling.Title}"
+                                TextWrapping="Wrap" />
+                            <ui:TextBlock
+                                Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                                Text="{ext:Loc Settings.Appearance.SmoothScrolling.Description}"
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                    </ui:CardControl.Header>
+                    <ui:ToggleSwitch
+                        Command="{Binding ViewModel.ToggleSmoothScrollingCommand}"
+                        Cursor="Hand"
+                        IsChecked="{Binding ViewModel.SmoothScrolling, Mode=OneWay}"
+                        OffContent="{ext:Loc Common.Toggle.Off}"
+                        OnContent="{ext:Loc Common.Toggle.On}" />
+                </ui:CardControl>
+            </StackPanel>
+
+            <StackPanel Style="{StaticResource SettingsSectionStyle}">
+                <ui:TextBlock Style="{StaticResource SectionHeaderStyle}" Text="{ext:Loc Settings.Advanced.Header}" />
+
+                <ui:CardAction
+                    Margin="0,0,0,4"
+                    Padding="16,14"
+                    Command="{Binding ViewModel.OpenRootDirCommand}"
+                    Cursor="Hand"
+                    Icon="{ui:SymbolIcon Folder24}"
+                    IsChevronVisible="False">
+                    <Grid ColumnDefinitions="* Auto">
+                        <StackPanel>
+                            <ui:TextBlock
+                                Margin="0"
+                                FontTypography="BodyStrong"
+                                Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+                                Text="{ext:Loc Settings.Advanced.OpenRootDir.Title}"
+                                TextWrapping="Wrap" />
+                            <ui:TextBlock
+                                Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                                Text="{ext:Loc Settings.Advanced.OpenRootDir.Description}"
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                        <ui:SymbolIcon
+                            Grid.Column="1"
+                            FontSize="20"
+                            Symbol="Open24" />
+                    </Grid>
+                </ui:CardAction>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

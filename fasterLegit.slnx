@@ -1,0 +1,4 @@
+<Solution>
+    <Project Path="fasterLegit.Test/fasterLegit.Test.csproj" />
+    <Project Path="fasterLegit/fasterLegit.csproj" />
+</Solution>

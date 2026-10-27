@@ -1,0 +1,133 @@
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using fasterLegit.Common.Helpers;
+using fasterLegit.Domain.Abstractions;
+using fasterLegit.Domain.Configuration;
+using fasterLegit.Resources.Languages;
+using fasterLegit.Services.Configuration;
+using fasterLegit.UI.Controls;
+using fasterLegit.UI.Dialogs;
+using fasterLegit.UI.Pages;
+using fasterLegit.UI.ViewModels.Windows;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Wpf.Ui;
+using Wpf.Ui.Abstractions;
+using Wpf.Ui.Controls;
+
+namespace fasterLegit.UI.Windows;
+
+public partial class MainWindow : IWindow
+{
+    private readonly ILogger<MainWindow> _logger;
+    private readonly IContentDialogService _contentDialogService;
+    private readonly IOptionsMonitor<AppSettings> _appOptionsMonitor;
+    private readonly ConfigManager _configManager;
+
+    public MainWindow(
+        MainWindowViewModel viewModel,
+        ConfigManager configManager,
+        INavigationService navigationService,
+        IContentDialogService contentDialogService,
+        INavigationViewPageProvider pageProvider,
+        IOptionsMonitor<AppSettings> appOptionsMonitor,
+        ISnackbarService snackbarService,
+        ILogger<MainWindow> logger
+    )
+    {
+        _logger = logger;
+        _contentDialogService = contentDialogService;
+        _appOptionsMonitor = appOptionsMonitor;
+        _configManager = configManager;
+        InitializeComponent();
+
+        // Mica needs Windows 11; on older systems WPF-UI leaves a full-window
+        // glass frame that renders white on virtualized display stacks (#71).
+        if (Shared.IsWindows11OrGreater)
+        {
+            WindowBackdropType = WindowBackdropType.Mica;
+        }
+
+        DataContext = viewModel;
+
+        snackbarService.SetSnackbarPresenter(SnackbarPresenter);
+        contentDialogService.SetDialogHost(RootContentDialogPresenter);
+        navigationService.SetNavigationControl(RootNavigation);
+
+        RootNavigation.SetPageProviderService(pageProvider);
+
+        RootNavigation.Loaded += OnRootNavigationLoaded;
+    }
+
+    internal void UpdatePendingIndicator(bool hasPending)
+    {
+        AppTitleText.Text = hasPending ? "fasterLegit*" : "fasterLegit";
+        Title = hasPending ? "fasterLegit*" : "fasterLegit";
+    }
+
+    private async void OnRootNavigationLoaded(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            RootNavigation.Loaded -= OnRootNavigationLoaded;
+
+            if (!_appOptionsMonitor.CurrentValue.App.LegalAccepted)
+            {
+                var legalDialog =
+                    (Application.Current as App)?.AppHost?.Services.GetService<LegalDialog>()
+                    ?? new LegalDialog();
+
+                var dialog = new ContentDialog
+                {
+                    Content = legalDialog,
+                    DefaultButton = ContentDialogButton.Primary,
+                };
+
+                // Bind to Loc so title/buttons update when language changes inside the dialog
+                dialog.SetBinding(
+                    ContentDialog.TitleProperty,
+                    new Binding("[LegalDialog.Title]")
+                    {
+                        Source = Loc.Instance,
+                        Mode = BindingMode.OneWay,
+                    }
+                );
+                dialog.SetBinding(
+                    ContentDialog.PrimaryButtonTextProperty,
+                    new Binding("[Button.Accept]")
+                    {
+                        Source = Loc.Instance,
+                        Mode = BindingMode.OneWay,
+                    }
+                );
+                dialog.SetBinding(
+                    ContentDialog.CloseButtonTextProperty,
+                    new Binding("[Button.Close]")
+                    {
+                        Source = Loc.Instance,
+                        Mode = BindingMode.OneWay,
+                    }
+                );
+
+                var result = await _contentDialogService.ShowAsync(dialog, CancellationToken.None);
+                if (result == ContentDialogResult.Primary)
+                {
+                    await _configManager.SetAsync(x => x.App.LegalAccepted, true);
+                }
+                else
+                {
+                    Close();
+                    return;
+                }
+            }
+
+            RootNavigation.Navigate(typeof(DashboardPage));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error during navigation initialization");
+        }
+    }
+}
