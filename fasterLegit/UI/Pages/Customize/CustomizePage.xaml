@@ -65,7 +65,7 @@
                             <ui:SymbolIcon
                                 Margin="0,0,15,0"
                                 FontSize="30"
-                                Foreground="{DynamicResource AccentYellowBrush}"
+                                Foreground="{DynamicResource BrandAccentBrush}"
                                 Symbol="{Binding Icon}" />
 
                             <StackPanel Grid.Column="1">

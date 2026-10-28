@@ -148,32 +148,52 @@ public partial class App : Application
     }
 
     /// <summary>
-    ///     Applies the duck-yellow accent palette tuned for the given theme. Light
-    ///     uses deeper honey tones so accent text and fills stay readable on white;
-    ///     dark keeps the brighter golden tones. Centralized so startup and theme
+    ///     Applies the VELORA teal accent palette tuned for the given theme. Light
+    ///     uses deeper teal tones so accent text and fills stay readable on white;
+    ///     dark keeps the brighter mint tones. Centralized so startup and theme
     ///     switches always use the same palettes.
     /// </summary>
     internal static void ApplyAccentFor(ApplicationTheme theme)
     {
+        ApplyBrandSurfaces(theme == ApplicationTheme.Dark);
         if (theme == ApplicationTheme.Dark)
         {
             ApplicationAccentColorManager.Apply(
-                systemAccent: Color.FromRgb(216, 155, 29),
-                primaryAccent: Color.FromRgb(235, 193, 94),
-                secondaryAccent: Color.FromRgb(255, 247, 200),
-                tertiaryAccent: Color.FromRgb(255, 243, 131)
+                systemAccent: Color.FromRgb(33, 169, 143),
+                primaryAccent: Color.FromRgb(84, 222, 193),
+                secondaryAccent: Color.FromRgb(124, 235, 211),
+                tertiaryAccent: Color.FromRgb(49, 189, 160)
             );
             RefreshToggleSwitchBrushes();
             return;
         }
 
         ApplicationAccentColorManager.Apply(
-            systemAccent: Color.FromRgb(138, 94, 0),
-            primaryAccent: Color.FromRgb(138, 94, 0),
-            secondaryAccent: Color.FromRgb(122, 88, 0),
-            tertiaryAccent: Color.FromRgb(110, 75, 0)
+            systemAccent: Color.FromRgb(0, 107, 89),
+            primaryAccent: Color.FromRgb(0, 107, 89),
+            secondaryAccent: Color.FromRgb(0, 94, 78),
+            tertiaryAccent: Color.FromRgb(0, 80, 67)
         );
         RefreshToggleSwitchBrushes();
+    }
+
+    private static void ApplyBrandSurfaces(bool dark)
+    {
+        var resources = Application.Current.Resources;
+        void Brush(string key, string value) =>
+            resources[key] = new SolidColorBrush((Color)ColorConverter.ConvertFromString(value));
+
+        Brush("ApplicationBackgroundBrush", dark ? "#0B1216" : "#EDF4F2");
+        Brush("NavigationViewContentBackground", dark ? "#10191E" : "#F6FAF9");
+        Brush("CardBackgroundFillColorDefaultBrush", dark ? "#172329" : "#FFFFFF");
+        Brush("CardBackgroundFillColorSecondaryBrush", dark ? "#1D2D34" : "#EAF2EF");
+        Brush("CardStrokeColorDefaultBrush", dark ? "#2C4149" : "#C9DCD5");
+        Brush("NavigationViewContentGridBorderBrush", dark ? "#2C4149" : "#C9DCD5");
+        Brush("TextFillColorPrimaryBrush", dark ? "#ECF5F2" : "#142D29");
+        Brush("TextFillColorSecondaryBrush", dark ? "#AEC3BE" : "#49665F");
+        Brush("BrandAccentBrush", dark ? "#54DEC1" : "#006B59");
+        Brush("BrandOnAccentBrush", dark ? "#07251F" : "#FFFFFF");
+        Brush("BrandAccentMutedBrush", dark ? "#183D36" : "#D7F3E9");
     }
 
     private static void RefreshToggleSwitchBrushes()
@@ -185,9 +205,9 @@ public partial class App : Application
         Color GetColor(string key, Color fallback) =>
             app.Resources[key] is Color color ? color : fallback;
 
-        var primary = GetColor("SystemAccentColorPrimary", Color.FromRgb(235, 193, 94));
-        var secondary = GetColor("AccentFillColorSecondary", Color.FromRgb(255, 247, 200));
-        var tertiary = GetColor("AccentFillColorTertiary", Color.FromRgb(255, 243, 131));
+        var primary = GetColor("SystemAccentColorPrimary", Color.FromRgb(84, 222, 193));
+        var secondary = GetColor("AccentFillColorSecondary", Color.FromRgb(124, 235, 211));
+        var tertiary = GetColor("AccentFillColorTertiary", Color.FromRgb(49, 189, 160));
         var knobOn = GetColor("TextOnAccentFillColorPrimary", Colors.White);
 
         app.Resources["ToggleSwitchFillOn"] = new SolidColorBrush(primary);

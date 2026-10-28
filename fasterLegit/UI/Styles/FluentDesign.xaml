@@ -5,22 +5,22 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml">
 
-    <CornerRadius x:Key="CornerRadiusSmall">4</CornerRadius>
-    <CornerRadius x:Key="CornerRadiusMedium">8</CornerRadius>
-    <CornerRadius x:Key="CornerRadiusLarge">12</CornerRadius>
-    <Thickness x:Key="PageMargin">42,32,42,0</Thickness>
+    <CornerRadius x:Key="CornerRadiusSmall">6</CornerRadius>
+    <CornerRadius x:Key="CornerRadiusMedium">10</CornerRadius>
+    <CornerRadius x:Key="CornerRadiusLarge">16</CornerRadius>
+    <Thickness x:Key="PageMargin">32,28,32,20</Thickness>
     <Thickness x:Key="PageInnerMargin">0,0,16,0</Thickness>
     <Thickness x:Key="SectionMargin">0,0,0,24</Thickness>
     <Thickness x:Key="SectionTopMargin">0,12,0,0</Thickness>
-    <Thickness x:Key="CardPadding">16,14</Thickness>
-    <Thickness x:Key="ListRowPadding">16,12</Thickness>
-    <Thickness x:Key="ToolbarPadding">8,6</Thickness>
+    <Thickness x:Key="CardPadding">20,18</Thickness>
+    <Thickness x:Key="ListRowPadding">18,14</Thickness>
+    <Thickness x:Key="ToolbarPadding">12,10</Thickness>
     <Thickness x:Key="ControlGap">0,0,8,0</Thickness>
     <Thickness x:Key="RowGap">0,0,0,8</Thickness>
 
-    <Color x:Key="AccentYellowColor">#FFFFD114</Color>
-    <SolidColorBrush x:Key="AccentYellowBrush" Color="{StaticResource AccentYellowColor}" />
-    <SolidColorBrush x:Key="AccentYellowMutedBrush" Color="#33FFD114" />
+    <Color x:Key="BrandAccentColor">#FF54DEC1</Color>
+    <SolidColorBrush x:Key="BrandAccentBrush" Color="{StaticResource BrandAccentColor}" />
+    <SolidColorBrush x:Key="BrandAccentMutedBrush" Color="#1854DEC1" />
 
     <Style x:Key="PageRootStyle" TargetType="Page">
         <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
@@ -35,6 +35,8 @@
 
     <Style x:Key="PageTitleStyle" TargetType="ui:TextBlock">
         <Setter Property="FontTypography" Value="Title" />
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
 
@@ -52,7 +54,7 @@
     </Style>
 
     <Style x:Key="SecondaryTextStyle" TargetType="ui:TextBlock">
-        <Setter Property="Appearance" Value="Secondary" />
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorSecondaryBrush}" />
         <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
 
@@ -137,7 +139,7 @@
         x:Key="SearchBoxStyle"
         BasedOn="{StaticResource DefaultUiTextBoxStyle}"
         TargetType="ui:TextBox">
-        <Setter Property="MinWidth" Value="240" />
+        <Setter Property="MinWidth" Value="200" />
         <Setter Property="Margin" Value="{StaticResource ControlGap}" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
@@ -172,7 +174,7 @@
     <Style x:Key="DialogIconStyle" TargetType="ui:SymbolIcon">
         <Setter Property="Margin" Value="0,0,6,0" />
         <Setter Property="FontSize" Value="44" />
-        <Setter Property="Foreground" Value="{DynamicResource AccentYellowBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource BrandAccentBrush}" />
     </Style>
 
     <Style x:Key="ContentPresenterGridItemStyle" TargetType="ContentPresenter">
@@ -191,4 +193,77 @@
         <Setter Property="behaviors:SmoothScrollBehavior.Multiplier" Value="1.3" />
     </Style>
 
+
+    <SolidColorBrush x:Key="BrandCanvasBrush" Color="#10191E" />
+    <SolidColorBrush x:Key="BrandSidebarBrush" Color="#0B1216" />
+    <SolidColorBrush x:Key="BrandSurfaceBrush" Color="#172329" />
+    <SolidColorBrush x:Key="BrandStrokeBrush" Color="#2C4149" />
+    <Style x:Key="BrandIntroStyle" TargetType="Border">
+        <Setter Property="Padding" Value="24" />
+        <Setter Property="Margin" Value="0,0,0,24" />
+        <Setter Property="CornerRadius" Value="16" />
+        <Setter Property="Background" Value="{DynamicResource CardBackgroundFillColorDefaultBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource CardStrokeColorDefaultBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+    <Style BasedOn="{StaticResource DefaultUiButtonStyle}" TargetType="ui:Button">
+        <Setter Property="MinHeight" Value="36" />
+        <Setter Property="Padding" Value="14,8" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Style.Triggers>
+            <Trigger Property="Appearance" Value="Primary">
+                <Setter Property="Background" Value="{DynamicResource BrandAccentBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource BrandOnAccentBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource BrandAccentBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style BasedOn="{StaticResource DefaultUiCardControlStyle}" TargetType="ui:CardControl">
+        <Setter Property="Padding" Value="20,18" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="10" />
+    </Style>
+
+    <Style x:Key="WorkspaceTabsStyle" TargetType="TabControl">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabControl">
+                    <DockPanel>
+                        <TabPanel DockPanel.Dock="Top" IsItemsHost="True" />
+                        <ContentPresenter ContentSource="SelectedContent" />
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="TabItem">
+                    <Setter Property="Foreground" Value="{DynamicResource TextFillColorSecondaryBrush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <Border x:Name="TabSurface" Margin="0,0,12,0" Padding="18,12" CornerRadius="8" BorderThickness="1" BorderBrush="{DynamicResource CardStrokeColorDefaultBrush}">
+                                    <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="TabSurface" Property="Background" Value="{DynamicResource BrandAccentMutedBrush}" />
+                                        <Setter Property="Foreground" Value="{DynamicResource BrandAccentBrush}" />
+                                    </Trigger>
+                                    <Trigger Property="IsKeyboardFocused" Value="True">
+                                        <Setter TargetName="TabSurface" Property="BorderBrush" Value="{DynamicResource BrandAccentBrush}" />
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="TabSurface" Property="Background" Value="{DynamicResource CardBackgroundFillColorSecondaryBrush}" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

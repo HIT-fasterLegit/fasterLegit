@@ -227,7 +227,7 @@
                     Margin="0,0,12,0"
                     VerticalAlignment="Center"
                     FontSize="30"
-                    Foreground="{DynamicResource AccentYellowBrush}"
+                    Foreground="{DynamicResource BrandAccentBrush}"
                     Symbol="{Binding ViewModel.CategoryIcon}" />
                 <ui:TextBlock
                     VerticalAlignment="Center"
