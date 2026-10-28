@@ -699,6 +699,11 @@ $RECYCLE.BIN/
 
 
 # Local agent/session artifacts
+**/.tools/
+**/.build-cache/
+fasterLegit/DesignReview/*
+!fasterLegit/DesignReview/Dark-1360-DashboardPage.png
+!fasterLegit/DesignReview/Light-1360-DashboardPage.png
 omp-session-*.html
 crash_*.log
 TestResults/
