@@ -850,8 +850,8 @@
                 Margin="{TemplateBinding FrameMargin}"
                 Background="{DynamicResource NavigationViewContentBackground}"
                 BorderBrush="{DynamicResource NavigationViewContentGridBorderBrush}"
-                BorderThickness="1,1,0,0"
-                CornerRadius="8,0,0,0">
+                BorderThickness="1,0,0,0"
+                CornerRadius="18,0,0,0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -978,7 +978,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Grid x:Name="PaneGrid" Grid.Row="0">
+            <Grid x:Name="PaneGrid" Grid.Row="0" Margin="24,8,24,12">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
@@ -1053,7 +1053,7 @@
                 </ScrollViewer>
             </Grid>
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" Background="{DynamicResource NavigationViewContentBackground}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />

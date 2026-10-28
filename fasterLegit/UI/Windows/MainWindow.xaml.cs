@@ -63,8 +63,10 @@ public partial class MainWindow : IWindow
 
     internal void UpdatePendingIndicator(bool hasPending)
     {
-        AppTitleText.Text = hasPending ? "fasterLegit*" : "fasterLegit";
-        Title = hasPending ? "fasterLegit*" : "fasterLegit";
+        AppTitleText.Text = hasPending
+            ? $"{Loc.Instance["Brand.Name"]}*"
+            : Loc.Instance["Brand.Name"];
+        Title = hasPending ? $"{Loc.Instance["Brand.Name"]}*" : Loc.Instance["Brand.Name"];
     }
 
     private async void OnRootNavigationLoaded(object sender, RoutedEventArgs e)
