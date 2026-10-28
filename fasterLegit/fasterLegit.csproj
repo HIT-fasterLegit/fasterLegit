@@ -13,15 +13,17 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
+        <AssemblyName>VELORA</AssemblyName>
+        <RootNamespace>fasterLegit</RootNamespace>
         <Authors>fatDuck</Authors>
         <ApplicationIcon>Logo.ico</ApplicationIcon>
         <Company>fatDuck</Company>
         <FileVersion>2.29.0</FileVersion>
         <Version>2.29.0</Version>
-        <Product>fasterLegit</Product>
+        <Product>VELORA</Product>
         <Copyright>Copyright fatDuck 2026</Copyright>
-        <AssemblyTitle>fasterLegit</AssemblyTitle>
-        <AssemblyDescription>Free, open-source Windows optimization tool for performance, privacy, and simplicity.</AssemblyDescription>
+        <AssemblyTitle>VELORA</AssemblyTitle>
+        <AssemblyDescription>VELORA â€” a clear workspace for Windows maintenance.</AssemblyDescription>
         <NeutralLanguage>en-US</NeutralLanguage>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <!-- The gate: a warning fails the build, and the promoted style rules run inside it. -->
@@ -78,7 +80,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Resource Include="Resources\Images\Duck.png" />
+        <Resource Include="Resources\Images\VeloraMark.png" />
         <Resource Include="Resources\Images\GitHubLogoBlack.png" />
         <Resource Include="Resources\Images\GitHubLogoWhite.png" />
         <Resource Include="Resources\Images\DiscordLogo.png" />
@@ -90,5 +92,12 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Translations.resx</DependentUpon>
         </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="..\TERMS.md;..\PRIVACY.md;..\DISCLAIMER.md;..\LICENSE;..\THIRD-PARTY-NOTICES.md">
+            <Link>Documents\%(Filename)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
     </ItemGroup>
 </Project>

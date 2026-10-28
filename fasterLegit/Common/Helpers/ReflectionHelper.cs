@@ -41,10 +41,13 @@ public static class ReflectionHelper
             var types = AppDomain
                 .CurrentDomain.GetAssemblies()
                 .Where(a =>
-                    a.FullName != null
-                    && a.FullName.StartsWith(
-                        nameof(fasterLegit),
-                        StringComparison.OrdinalIgnoreCase
+                    a == typeof(ReflectionHelper).Assembly
+                    || (
+                        a.FullName != null
+                        && a.FullName.StartsWith(
+                            nameof(fasterLegit),
+                            StringComparison.OrdinalIgnoreCase
+                        )
                     )
                 )
                 .SelectMany(SafeGetTypes)

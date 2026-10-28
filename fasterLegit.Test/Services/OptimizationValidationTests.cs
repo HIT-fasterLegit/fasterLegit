@@ -15,9 +15,9 @@ namespace fasterLegit.Test.Services;
 public class OptimizationValidationTests
 {
     [Fact]
-    public void Assemblies_ProjectRename_UsesFasterLegitNames()
+    public void Assemblies_BrandRename_UsesVeloraApplicationAndStableTestName()
     {
-        Assert.Equal("fasterLegit", typeof(fasterLegit.App).Assembly.GetName().Name);
+        Assert.Equal("VELORA", typeof(fasterLegit.App).Assembly.GetName().Name);
         Assert.Equal("fasterLegit.Test", GetType().Assembly.GetName().Name);
     }
 
