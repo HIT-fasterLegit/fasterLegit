@@ -1,4 +1,4 @@
-# Flow và cơ chế tối ưu của fasterLegit
+# Flow và cơ chế tối ưu của VELORA
 
 Tài liệu này mô tả code đang có trong working tree hiện tại, không mô tả các tính năng chỉ còn
 resource dịch hoặc đã bị xóa khỏi source. Mục tiêu là trả lời hai câu hỏi:

@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T11:27:05.4695294Z",
+  "title": "Design System: VELORA",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "canonical": "#54DEC1",
+        "displayName": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.1265 176.5)",
+          "oklch(26% 0.1265 176.5)",
+          "oklch(38% 0.1265 176.5)",
+          "oklch(49% 0.1265 176.5)",
+          "oklch(61% 0.1265 176.5)",
+          "oklch(72% 0.1265 176.5)",
+          "oklch(84% 0.1265 176.5)",
+          "oklch(95% 0.1265 176.5)"
+        ]
+      },
+      "primary-light-theme": {
+        "role": "primary",
+        "canonical": "#006B59",
+        "displayName": "primary light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0883 175.7)",
+          "oklch(26% 0.0883 175.7)",
+          "oklch(38% 0.0883 175.7)",
+          "oklch(49% 0.0883 175.7)",
+          "oklch(61% 0.0883 175.7)",
+          "oklch(72% 0.0883 175.7)",
+          "oklch(84% 0.0883 175.7)",
+          "oklch(95% 0.0883 175.7)"
+        ]
+      },
+      "on-primary": {
+        "role": "primary",
+        "canonical": "#07251F",
+        "displayName": "on primary",
+        "tonalRamp": [
+          "oklch(15% 0.0373 177.3)",
+          "oklch(26% 0.0373 177.3)",
+          "oklch(38% 0.0373 177.3)",
+          "oklch(49% 0.0373 177.3)",
+          "oklch(61% 0.0373 177.3)",
+          "oklch(72% 0.0373 177.3)",
+          "oklch(84% 0.0373 177.3)",
+          "oklch(95% 0.0373 177.3)"
+        ]
+      },
+      "on-primary-light-theme": {
+        "role": "primary",
+        "canonical": "#FFFFFF",
+        "displayName": "on primary light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.9)",
+          "oklch(26% 0.0000 89.9)",
+          "oklch(38% 0.0000 89.9)",
+          "oklch(49% 0.0000 89.9)",
+          "oklch(61% 0.0000 89.9)",
+          "oklch(72% 0.0000 89.9)",
+          "oklch(84% 0.0000 89.9)",
+          "oklch(95% 0.0000 89.9)"
+        ]
+      },
+      "accent-muted": {
+        "role": "primary",
+        "canonical": "#183D36",
+        "displayName": "accent muted",
+        "tonalRamp": [
+          "oklch(15% 0.0444 179.3)",
+          "oklch(26% 0.0444 179.3)",
+          "oklch(38% 0.0444 179.3)",
+          "oklch(49% 0.0444 179.3)",
+          "oklch(61% 0.0444 179.3)",
+          "oklch(72% 0.0444 179.3)",
+          "oklch(84% 0.0444 179.3)",
+          "oklch(95% 0.0444 179.3)"
+        ]
+      },
+      "accent-muted-light-theme": {
+        "role": "primary",
+        "canonical": "#D7F3E9",
+        "displayName": "accent muted light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0322 172.1)",
+          "oklch(26% 0.0322 172.1)",
+          "oklch(38% 0.0322 172.1)",
+          "oklch(49% 0.0322 172.1)",
+          "oklch(61% 0.0322 172.1)",
+          "oklch(72% 0.0322 172.1)",
+          "oklch(84% 0.0322 172.1)",
+          "oklch(95% 0.0322 172.1)"
+        ]
+      },
+      "shell": {
+        "role": "neutral",
+        "canonical": "#0B1216",
+        "displayName": "shell",
+        "tonalRamp": [
+          "oklch(15% 0.0136 233.6)",
+          "oklch(26% 0.0136 233.6)",
+          "oklch(38% 0.0136 233.6)",
+          "oklch(49% 0.0136 233.6)",
+          "oklch(61% 0.0136 233.6)",
+          "oklch(72% 0.0136 233.6)",
+          "oklch(84% 0.0136 233.6)",
+          "oklch(95% 0.0136 233.6)"
+        ]
+      },
+      "shell-light-theme": {
+        "role": "neutral",
+        "canonical": "#EDF4F2",
+        "displayName": "shell light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0079 177.3)",
+          "oklch(26% 0.0079 177.3)",
+          "oklch(38% 0.0079 177.3)",
+          "oklch(49% 0.0079 177.3)",
+          "oklch(61% 0.0079 177.3)",
+          "oklch(72% 0.0079 177.3)",
+          "oklch(84% 0.0079 177.3)",
+          "oklch(95% 0.0079 177.3)"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "canonical": "#10191E",
+        "displayName": "canvas",
+        "tonalRamp": [
+          "oklch(15% 0.0166 232.9)",
+          "oklch(26% 0.0166 232.9)",
+          "oklch(38% 0.0166 232.9)",
+          "oklch(49% 0.0166 232.9)",
+          "oklch(61% 0.0166 232.9)",
+          "oklch(72% 0.0166 232.9)",
+          "oklch(84% 0.0166 232.9)",
+          "oklch(95% 0.0166 232.9)"
+        ]
+      },
+      "canvas-light-theme": {
+        "role": "neutral",
+        "canonical": "#F6FAF9",
+        "displayName": "canvas light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0044 179.7)",
+          "oklch(26% 0.0044 179.7)",
+          "oklch(38% 0.0044 179.7)",
+          "oklch(49% 0.0044 179.7)",
+          "oklch(61% 0.0044 179.7)",
+          "oklch(72% 0.0044 179.7)",
+          "oklch(84% 0.0044 179.7)",
+          "oklch(95% 0.0044 179.7)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "canonical": "#172329",
+        "displayName": "surface",
+        "tonalRamp": [
+          "oklch(15% 0.0203 230.2)",
+          "oklch(26% 0.0203 230.2)",
+          "oklch(38% 0.0203 230.2)",
+          "oklch(49% 0.0203 230.2)",
+          "oklch(61% 0.0203 230.2)",
+          "oklch(72% 0.0203 230.2)",
+          "oklch(84% 0.0203 230.2)",
+          "oklch(95% 0.0203 230.2)"
+        ]
+      },
+      "surface-light-theme": {
+        "role": "neutral",
+        "canonical": "#FFFFFF",
+        "displayName": "surface light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.9)",
+          "oklch(26% 0.0000 89.9)",
+          "oklch(38% 0.0000 89.9)",
+          "oklch(49% 0.0000 89.9)",
+          "oklch(61% 0.0000 89.9)",
+          "oklch(72% 0.0000 89.9)",
+          "oklch(84% 0.0000 89.9)",
+          "oklch(95% 0.0000 89.9)"
+        ]
+      },
+      "surface-secondary": {
+        "role": "neutral",
+        "canonical": "#1D2D34",
+        "displayName": "surface secondary",
+        "tonalRamp": [
+          "oklch(15% 0.0248 227.0)",
+          "oklch(26% 0.0248 227.0)",
+          "oklch(38% 0.0248 227.0)",
+          "oklch(49% 0.0248 227.0)",
+          "oklch(61% 0.0248 227.0)",
+          "oklch(72% 0.0248 227.0)",
+          "oklch(84% 0.0248 227.0)",
+          "oklch(95% 0.0248 227.0)"
+        ]
+      },
+      "surface-secondary-light-theme": {
+        "role": "neutral",
+        "canonical": "#EAF2EF",
+        "displayName": "surface secondary light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0094 171.8)",
+          "oklch(26% 0.0094 171.8)",
+          "oklch(38% 0.0094 171.8)",
+          "oklch(49% 0.0094 171.8)",
+          "oklch(61% 0.0094 171.8)",
+          "oklch(72% 0.0094 171.8)",
+          "oklch(84% 0.0094 171.8)",
+          "oklch(95% 0.0094 171.8)"
+        ]
+      },
+      "stroke": {
+        "role": "neutral",
+        "canonical": "#2C4149",
+        "displayName": "stroke",
+        "tonalRamp": [
+          "oklch(15% 0.0298 223.6)",
+          "oklch(26% 0.0298 223.6)",
+          "oklch(38% 0.0298 223.6)",
+          "oklch(49% 0.0298 223.6)",
+          "oklch(61% 0.0298 223.6)",
+          "oklch(72% 0.0298 223.6)",
+          "oklch(84% 0.0298 223.6)",
+          "oklch(95% 0.0298 223.6)"
+        ]
+      },
+      "stroke-light-theme": {
+        "role": "neutral",
+        "canonical": "#C9DCD5",
+        "displayName": "stroke light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0225 171.7)",
+          "oklch(26% 0.0225 171.7)",
+          "oklch(38% 0.0225 171.7)",
+          "oklch(49% 0.0225 171.7)",
+          "oklch(61% 0.0225 171.7)",
+          "oklch(72% 0.0225 171.7)",
+          "oklch(84% 0.0225 171.7)",
+          "oklch(95% 0.0225 171.7)"
+        ]
+      },
+      "text-primary": {
+        "role": "primary",
+        "canonical": "#ECF5F2",
+        "displayName": "text primary",
+        "tonalRamp": [
+          "oklch(15% 0.0103 174.3)",
+          "oklch(26% 0.0103 174.3)",
+          "oklch(38% 0.0103 174.3)",
+          "oklch(49% 0.0103 174.3)",
+          "oklch(61% 0.0103 174.3)",
+          "oklch(72% 0.0103 174.3)",
+          "oklch(84% 0.0103 174.3)",
+          "oklch(95% 0.0103 174.3)"
+        ]
+      },
+      "text-primary-light-theme": {
+        "role": "primary",
+        "canonical": "#142D29",
+        "displayName": "text primary light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0321 182.3)",
+          "oklch(26% 0.0321 182.3)",
+          "oklch(38% 0.0321 182.3)",
+          "oklch(49% 0.0321 182.3)",
+          "oklch(61% 0.0321 182.3)",
+          "oklch(72% 0.0321 182.3)",
+          "oklch(84% 0.0321 182.3)",
+          "oklch(95% 0.0321 182.3)"
+        ]
+      },
+      "text-secondary": {
+        "role": "neutral",
+        "canonical": "#AEC3BE",
+        "displayName": "text secondary",
+        "tonalRamp": [
+          "oklch(15% 0.0239 179.8)",
+          "oklch(26% 0.0239 179.8)",
+          "oklch(38% 0.0239 179.8)",
+          "oklch(49% 0.0239 179.8)",
+          "oklch(61% 0.0239 179.8)",
+          "oklch(72% 0.0239 179.8)",
+          "oklch(84% 0.0239 179.8)",
+          "oklch(95% 0.0239 179.8)"
+        ]
+      },
+      "text-secondary-light-theme": {
+        "role": "neutral",
+        "canonical": "#49665F",
+        "displayName": "text secondary light theme",
+        "tonalRamp": [
+          "oklch(15% 0.0359 178.1)",
+          "oklch(26% 0.0359 178.1)",
+          "oklch(38% 0.0359 178.1)",
+          "oklch(49% 0.0359 178.1)",
+          "oklch(61% 0.0359 178.1)",
+          "oklch(72% 0.0359 178.1)",
+          "oklch(84% 0.0359 178.1)",
+          "oklch(95% 0.0359 178.1)"
+        ]
+      }
+    },
+    "native": {
+      "units": "device-independent pixels",
+      "previewNote": "HTML/CSS snippets are portable visual translations. Native WPF-UI templates own exact inherited interactions.",
+      "minimumWindow": {
+        "height": 620,
+        "width": 900
+      },
+      "smoothScroll": {
+        "multiplier": 1.3,
+        "smoothing": 0.2
+      },
+      "platform": "WPF",
+      "rampNote": "Synthesized OKLCH lightness ramps preserve each source color hue and chroma; display gamut mapping may occur.",
+      "source": "UI/Styles/FluentDesign.xaml; App.xaml.cs; UI/Windows/MainWindow.xaml",
+      "defaultWindow": {
+        "height": 860,
+        "width": 1360
+      }
+    },
+    "motion": [],
+    "breakpoints": [],
+    "typographyMeta": {
+      "headline": {
+        "purpose": "Localized page titles.",
+        "displayName": "Page heading"
+      },
+      "identity": {
+        "purpose": "VELORA settings identity.",
+        "displayName": "Identity"
+      }
+    },
+    "shadows": []
+  },
+  "components": [
+    {
+      "html": "<button class=\"ds-primary\">Review changes</button>",
+      "name": "Primary action",
+      "css": ".ds-primary{font-family:\"Segoe UI Variable\",\"Segoe UI\",sans-serif;font-size:14px;color:#ECF5F2; background:#54DEC1;color:#07251F;padding:8px 14px;min-height:36px;border:1px solid #54DEC1;border-radius:4px;cursor:pointer}.ds-primary:hover{filter:brightness(1.08)}.ds-primary:focus-visible{outline:2px solid #ECF5F2;outline-offset:3px}.ds-primary:active{filter:brightness(.94)}.ds-primary:disabled{opacity:.45;cursor:default}",
+      "description": "Portable visual translation of the native accent action; WPF-UI owns exact native states.",
+      "kind": "button",
+      "refersTo": "button-primary"
+    },
+    {
+      "html": "<button class=\"ds-secondary\">Refresh</button>",
+      "name": "Secondary action",
+      "css": ".ds-secondary{font-family:\"Segoe UI Variable\",\"Segoe UI\",sans-serif;font-size:14px;color:#ECF5F2; background:#1D2D34;padding:8px 14px;min-height:36px;border:1px solid #2C4149;border-radius:4px;cursor:pointer}.ds-secondary:hover{background:#2C4149}.ds-secondary:focus-visible{outline:2px solid #54DEC1;outline-offset:3px}.ds-secondary:active{background:#172329}",
+      "kind": "button",
+      "description": "Native secondary action translated for the preview canvas."
+    },
+    {
+      "html": "<input class=\"ds-search\" aria-label=\"Search applications\" placeholder=\"Search applications\" />",
+      "name": "Search field",
+      "css": ".ds-search{font-family:\"Segoe UI Variable\",\"Segoe UI\",sans-serif;font-size:14px;color:#ECF5F2; min-width:200px;padding:8px 12px;background:#172329;border:1px solid #2C4149;border-radius:4px}.ds-search::placeholder{color:#AEC3BE}.ds-search:hover{border-color:#AEC3BE}.ds-search:focus-visible{outline:2px solid #54DEC1;outline-offset:2px}",
+      "kind": "input",
+      "description": "Search control with the observed 200-unit minimum width; native focus is represented by teal."
+    },
+    {
+      "html": "<nav class=\"ds-tabs\" aria-label=\"Startup views\"><button class=\"ds-tab\" aria-current=\"page\">Apps</button><button class=\"ds-tab\">Tasks</button></nav>",
+      "name": "Workspace tabs",
+      "css": ".ds-tabs{display:flex;gap:12px}.ds-tab{font-family:\"Segoe UI Variable\",\"Segoe UI\",sans-serif;font-size:14px;color:#ECF5F2; background:transparent;color:#AEC3BE;padding:12px 18px;border:1px solid #2C4149;border-radius:8px;cursor:pointer}.ds-tab[aria-current]{background:#183D36;color:#54DEC1}.ds-tab:hover{background:#1D2D34}.ds-tab:focus-visible{outline:none;border-color:#54DEC1}.ds-tab:active{background:#172329}",
+      "description": "Startup Apps and Tasks tabs with selected, hover and keyboard-focus treatment.",
+      "kind": "nav",
+      "refersTo": "tab-selected"
+    },
+    {
+      "html": "<article class=\"ds-card\"><strong>Storage</strong><p>Review your drives and available space.</p></article>",
+      "name": "Information card",
+      "css": ".ds-card{font-family:\"Segoe UI Variable\",\"Segoe UI\",sans-serif;font-size:14px;color:#ECF5F2; background:#172329;border:1px solid #2C4149;border-radius:10px;padding:18px 20px}.ds-card p{color:#AEC3BE;margin:5px 0 0}",
+      "description": "Shared flat information surface with a one-unit stroke.",
+      "kind": "card",
+      "refersTo": "card"
+    },
+    {
+      "html": "<span class=\"ds-chip\">Installed</span>",
+      "name": "Metadata pill",
+      "css": ".ds-chip{font-family:\"Segoe UI Variable\",\"Segoe UI\",sans-serif;font-size:14px;color:#ECF5F2; display:inline-block;background:#1D2D34;border-radius:6px;padding:2px 6px}",
+      "description": "Noninteractive compact metadata; risk badges keep their own semantic colors.",
+      "kind": "chip",
+      "refersTo": "chip"
+    }
+  ],
+  "narrative": {
+    "donts": [
+      "Don't add promotional references to the previous identity in user-facing surfaces.",
+      "Don't remove mandatory copyright, license or legal attribution notices.",
+      "Don't invent health scores, performance measurements or speedup claims.",
+      "Don't replace the horizontal workspace with the old navigation rail."
+    ],
+    "overview": "VELORA makes local Windows maintenance feel orderly and deliberate. Graphite surfaces, mint emphasis and familiar native controls give real machine information priority. Actions remain close to their scope, with risk and recovery information visible before changes are applied.\n\nThe composition is a workspace: horizontal navigation, broad reading rows, compact supporting metadata and a restrained identity. The light theme uses the same hierarchy with pale green neutrals and deep teal emphasis. The owner delegated the design and approved the VELORA identity and teal direction.",
+    "rules": [
+      {
+        "section": "colors",
+        "name": "The Semantic Accent Rule",
+        "body": "Use teal for selection and intentional actions; keep warning, danger and success states tied to their existing semantic resources and text labels."
+      },
+      {
+        "section": "layout",
+        "name": "The Scope Rule",
+        "body": "Keep batch actions outside individual rows, next to the selection summary for the list they affect."
+      }
+    ],
+    "dos": [
+      "Do bind surfaces and accent foregrounds through paired theme resources.",
+      "Do preserve localized wrapping, keyboard access and native control states.",
+      "Do show real system data, scoped actions, risk and supported recovery.",
+      "Do reuse the approved VELORA mark and native Fluent symbols."
+    ],
+    "northStar": "The Quiet Control Room",
+    "keyCharacteristics": [
+      "Native WPF interaction and Fluent symbols.",
+      "Restrained teal emphasis over layered neutral surfaces.",
+      "Clear task hierarchy and readable localized content.",
+      "Explicit selection, review and action areas."
+    ]
+  }
+}

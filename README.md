@@ -1,179 +1,87 @@
 <div align="center">
 
-<img src="./.github/assets/fasterLegit.png" alt="fasterLegit" width="760" />
+<img src="fasterLegit/Resources/Images/VeloraMark.svg" width="88" alt="VELORA" />
 
-# fasterLegit
+# VELORA
 
-**A focused, open-source Windows utility for cleaning up the system, managing
-startup items, and applying transparent, reversible optimizations.**
+**Windows của bạn. Rõ ràng hơn.**
 
-[![Release](https://img.shields.io/github/v/release/HIT-fasterLegit/fasterLegit?style=flat-square&color=fed114)](https://github.com/HIT-fasterLegit/fasterLegit/releases/latest)
-[![CI](https://github.com/HIT-fasterLegit/fasterLegit/actions/workflows/ci.yml/badge.svg)](https://github.com/HIT-fasterLegit/fasterLegit/actions/workflows/ci.yml)
-[![License](https://img.shields.io/badge/license-GPL--3.0-red?style=flat-square)](./LICENSE)
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4?style=flat-square)](https://www.microsoft.com/windows)
+Không gian chăm sóc Windows: hiểu hệ thống, tinh chỉnh có chủ đích,
+quản lý ứng dụng và lấy lại dung lượng.
 
-[Download](https://github.com/HIT-fasterLegit/fasterLegit/releases/latest)
-· [Report a bug](https://github.com/HIT-fasterLegit/fasterLegit/issues)
-· [Contribute](./CONTRIBUTING.md)
+[Tính năng](#tính-năng) · [Chạy dự án](#chạy-dự-án) · [Kịch bản demo](fasterLegit/DEMO.md)
 
 </div>
 
-## About
+![Giao diện VELORA](fasterLegit/DesignReview/Dark-1360-DashboardPage.png)
 
-fasterLegit brings a small set of useful Windows maintenance tools into one
-Fluent-style desktop app. It is intentionally conservative: the app shows what
-an action changes, checks whether an optimization is supported, records its
-result, and keeps revert data when the operation can be undone.
+## Vì sao VELORA?
 
-The application runs locally, contains no telemetry, and does not apply tweaks
-automatically. You decide which actions to run.
+Mỗi thay đổi trên máy tính đều cần được hiểu rõ trước khi áp dụng. VELORA
+tập hợp thông tin phần cứng và các công cụ bảo trì vào một giao diện thống
+nhất. Người dùng xem mô tả, cân nhắc rủi ro và tự chọn thao tác; ứng dụng
+ghi lại kết quả và lưu dữ liệu hoàn tác cho thay đổi có hỗ trợ khôi phục.
 
-> [!IMPORTANT]
-> fasterLegit changes Windows settings and therefore requests Administrator
-> privileges. Review each action and create a restore point before changing a
-> system you depend on.
+## Tính năng
 
-## Current features
-
-| Area | What is available |
+| Không gian | Công việc |
 | --- | --- |
-| **Dashboard** | CPU, memory, GPU, storage, Windows, firmware, security, active power plan, and uptime information |
-| **Optimize** | Disable advertising and tailored suggestions, reduce visual effects, and hide the Windows 11 Start menu's Recommended section |
-| **Bloatware** | Find removable AppX packages, review their risk labels, and remove selected packages |
-| **Startup Manager** | Inspect startup applications and startup-related scheduled tasks, then enable or disable them |
-| **Disk Cleanup** | Scan selected cleanup locations before removing temporary files, update leftovers, thumbnails, Recycle Bin contents, crash reports, and old Windows installations |
-| **Settings** | Control appearance and application behavior, view legal information, and manage local preferences |
+| **Tổng quan** | Xem CPU, RAM, GPU, ổ đĩa, Windows, firmware, bảo mật và thời gian hoạt động |
+| **Tinh chỉnh** | Xem xét các thay đổi trải nghiệm Windows và quyền riêng tư |
+| **Thư viện ứng dụng** | Kiểm tra ứng dụng AppX đã cài và chọn ứng dụng muốn gỡ |
+| **Quản lý khởi động** | Xem và bật/tắt các mục được hỗ trợ chạy cùng Windows |
+| **Dọn dẹp ổ đĩa** | Quét, chọn và xóa tệp tạm; xem dung lượng trước khi thực hiện |
 
-The Optimize page currently contains three deliberately scoped optimizations.
-This README does not advertise experimental or hidden modules that are not
-available from the main navigation.
+Giao diện tiếng Việt, hai chế độ sáng/tối, tìm kiếm, lọc và trạng thái tải,
+trống, lỗi. Logo chữ V cùng bảng màu xanh ngọc tạo nhận diện xuyên suốt.
 
-## Safety and transparency
+## Cách sử dụng
 
-- **Explicit actions:** nothing is changed until you select and run an action.
-- **Compatibility checks:** unsupported optimizations are identified before
-  they can be applied.
-- **Risk and status details:** optimization cards expose risk, tags, state, and
-  recorded operation details.
-- **Revert support:** successful reversible optimization steps are persisted
-  locally and can be undone from the app.
-- **Honest outcomes:** skipped, refused, irreversible, and failed steps are
-  recorded separately instead of being reported as successful changes.
-- **Local-only data:** settings, logs, history, and revert data stay under
-  `%LocalAppData%\fasterLegit\`.
+1. Mở VELORA với quyền quản trị viên.
+2. Xem **Tổng quan** để hiểu cấu hình và trạng thái máy.
+3. Chọn công cụ, đọc mô tả và xem rủi ro của thao tác.
+4. Chỉ chọn mục cần xử lý, sau đó xác nhận thực hiện.
+5. Kiểm tra kết quả; dùng hoàn tác khi thao tác đó có hỗ trợ.
 
-Some operations, such as removing an application or permanently deleting files,
-are inherently irreversible. The app asks for confirmation where appropriate,
-but a Windows restore point and a backup remain the safest fallback.
+Xóa tệp và một số thao tác gỡ ứng dụng không thể hoàn tác. Sao lưu dữ liệu
+quan trọng và tạo điểm khôi phục trước khi thay đổi hệ thống.
 
-## Requirements
+## Chạy dự án
 
-- Windows 10 or Windows 11
-- x64 or ARM64 processor for published releases
-- Administrator privileges
-
-Published builds are self-contained, so users do not need to install the .NET
-runtime separately.
-
-## Getting started
-
-1. Download the latest executable from
-   [GitHub Releases](https://github.com/HIT-fasterLegit/fasterLegit/releases/latest).
-2. Choose the build for your processor: `x64` or `ARM64`.
-3. Run `fasterLegit.exe` and approve the Administrator prompt.
-4. Review an action's description and risk before applying it.
-5. Restart Windows when an action indicates that a restart is required.
-
-No installer is required. Windows SmartScreen may warn about an unsigned build;
-you can inspect the source and build the application yourself before running it.
-
-## Build from source
-
-Development is Windows-only and requires the .NET 10 SDK.
+Yêu cầu Windows 10/11 và .NET 10 SDK. Quy trình build đặt SDK, package,
+cache và tệp tạm ngay trong dự án trên ổ đĩa hiện tại.
 
 ```powershell
-git clone https://github.com/HIT-fasterLegit/fasterLegit.git
-cd fasterLegit
-dotnet restore fasterLegit.slnx
-dotnet build fasterLegit.slnx --configuration Release --no-restore
+.\fasterLegit\build.ps1 restore
+.\fasterLegit\build.ps1 build
+.\fasterLegit\build.ps1 run
 ```
 
-Run the app from an elevated terminal:
+Đóng gói bản Windows x64 chạy độc lập, không cần cài thêm .NET trên máy chạy:
 
 ```powershell
-dotnet run --project fasterLegit/fasterLegit.csproj
+.\fasterLegit\build.ps1 publish
 ```
 
-Run the test suite:
+Mở `fasterLegit/Release/VELORA/VELORA.exe`. Giữ các tệp đi kèm trong cùng thư mục.
+
+Nếu chưa có SDK, giải nén .NET 10 SDK cho Windows vào
+`fasterLegit/.tools/dotnet`. Thư mục kỹ thuật của solution được giữ ổn định
+để các lệnh build và dữ liệu hiện có tiếp tục tương thích.
+
+Chạy kiểm thử từ terminal quản trị viên trên máy thử nghiệm:
 
 ```powershell
-dotnet run --project fasterLegit.Test/fasterLegit.Test.csproj --configuration Release -- -longRunning 30
+.\fasterLegit\build.ps1 test
 ```
 
-Create a self-contained release build:
+## Tài liệu
 
-```powershell
-publish.bat single x64 --no-pause
-```
+- [Kịch bản trình diễn](fasterLegit/DEMO.md)
+- [Quy chuẩn giao diện](DESIGN.md)
+- [Luồng xử lý](fasterLegit/FLOW_VA_CO_CHE_TOI_UU_HOA.md)
+- [Hướng dẫn phát triển](CONTRIBUTING.md)
+- [Quyền riêng tư](PRIVACY.md), [Điều khoản](TERMS.md), [Lưu ý sử dụng](DISCLAIMER.md)
 
-Use `arm64` instead of `x64` for an ARM64 build. `publish.bat portable` creates
-a multi-file self-contained package, while `publish.bat single` creates one
-executable.
-
-## Project structure
-
-```text
-fasterLegit/
-├── fasterLegit/       WPF application
-├── fasterLegit.Test/  xUnit integration tests
-├── fasterLegit.slnx   .NET solution
-└── publish.bat        Windows publishing helper
-```
-
-The app targets `net10.0-windows` and uses WPF, WPF UI, CommunityToolkit.Mvvm,
-Microsoft.Extensions.Hosting, Serilog, and Newtonsoft.Json. System-changing
-work is routed through one operation runner, while Windows registry, service,
-scheduled-task, shell, and power operations remain in their dedicated
-providers.
-
-Optimization and tool state is stored locally:
-
-```text
-%LocalAppData%\fasterLegit\
-├── History\
-├── Revert\
-├── Resources\
-├── Crashes\
-├── appsettings.json
-└── fasterLegit.log
-```
-
-The selectable application locale is currently Vietnamese; neutral English
-resources remain available as the resource fallback.
-
-## Contributing
-
-Bug reports and focused pull requests are welcome. Before opening a pull
-request, read [CONTRIBUTING.md](./CONTRIBUTING.md), then run the same core checks
-used by CI:
-
-```powershell
-dotnet restore fasterLegit.slnx
-dotnet build fasterLegit.slnx --configuration Release --no-restore
-dotnet run --project fasterLegit.Test/fasterLegit.Test.csproj --configuration Release --no-build -- -longRunning 30
-csharpier check .
-```
-
-## Privacy and legal
-
-- [Privacy Policy](./PRIVACY.md)
-- [Terms of Service](./TERMS.md)
-- [Disclaimer](./DISCLAIMER.md)
-- [Third-party notices](./THIRD-PARTY-NOTICES.md)
-
-fasterLegit is provided without warranty. Back up important data and create a
-Windows restore point before applying system changes.
-
-## License
-
-Licensed under the [GNU General Public License v3.0](./LICENSE).
+Giấy phép và thông báo bản quyền được lưu trong [LICENSE](LICENSE)
+và [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
