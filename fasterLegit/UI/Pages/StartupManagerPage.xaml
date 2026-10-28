@@ -79,43 +79,8 @@
 
         <!--  Main Content  -->
         <Border Grid.Row="1" Visibility="{Binding ViewModel.HasData, Converter={StaticResource BooleanToVisibilityConverter}}">
-            <ScrollViewer>
-                <StackPanel>
-                    <!--  ═══════════ Startup Apps Section ═══════════  -->
-                    <ui:CardExpander
-                        Margin="0,0,0,12"
-                        Icon="{ui:SymbolIcon Apps24}"
-                        IsExpanded="True"
-                        Visibility="{Binding ViewModel.HasApps, Converter={StaticResource BooleanToVisibilityConverter}}">
-                        <ui:CardExpander.Header>
-                            <StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <ui:TextBlock
-                                        VerticalAlignment="Center"
-                                        FontTypography="BodyStrong"
-                                        Text="{ext:Loc StartupManager.Apps.Title}" />
-                                    <Border
-                                        Margin="8,0,0,0"
-                                        Padding="8,2"
-                                        VerticalAlignment="Center"
-                                        Background="{DynamicResource CardBackgroundFillColorSecondaryBrush}"
-                                        CornerRadius="4">
-                                        <ui:TextBlock
-                                            VerticalAlignment="Center"
-                                            Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                                            FontTypography="Caption"
-                                            Text="{ext:Loc StartupManager.Apps.CountSuffix,
-                                                           {Binding ViewModel.Apps.Count}}" />
-                                    </Border>
-                                </StackPanel>
-                                <ui:TextBlock
-                                    Margin="0,4,0,0"
-                                    FontTypography="Caption"
-                                    Foreground="{DynamicResource TextFillColorSecondaryBrush}"
-                                    Text="{ext:Loc StartupManager.Apps.Description}"
-                                    TextWrapping="Wrap" />
-                            </StackPanel>
-                        </ui:CardExpander.Header>
+<TabControl Style="{StaticResource WorkspaceTabsStyle}"><TabItem Header="{ext:Loc StartupManager.Apps.Title}"><ScrollViewer HorizontalScrollBarVisibility="Disabled"><Grid Margin="0,16,0,0">
+
 
                         <StackPanel>
                             <!--  Apps Toolbar  -->
@@ -227,7 +192,7 @@
                                                                 Style="{StaticResource SubtlePillStyle}">
                                                                 <ui:TextBlock
                                                                     VerticalAlignment="Center"
-                                                                    Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                                                                    Foreground="{DynamicResource TextFillColorSecondaryBrush}"
                                                                     FontTypography="Caption"
                                                                     Text="{Binding LocationDisplay}" />
                                                             </Border>
@@ -241,13 +206,14 @@
                                                         <ui:TextBlock
                                                             Margin="0,2,0,0"
                                                             FontTypography="Caption"
-                                                            Foreground="{DynamicResource TextFillColorDisabledBrush}"
+                                                            Foreground="{DynamicResource TextFillColorSecondaryBrush}"
                                                             Text="{Binding Command}"
                                                             TextTrimming="CharacterEllipsis"
                                                             Visibility="{Binding Command, Converter={StaticResource NotEmptyToVisibilityConverter}}" />
                                                     </StackPanel>
                                                     <StackPanel Grid.Column="2" Orientation="Horizontal">
                                                         <ui:ToggleSwitch
+                                                            AutomationProperties.Name="{Binding Name}"
                                                             IsChecked="{Binding IsEnabled, Mode=TwoWay}"
                                                             OffContent="{ext:Loc Common.Toggle.Off}"
                                                             OnContent="{ext:Loc Common.Toggle.On}" />
@@ -260,42 +226,8 @@
                                 </ui:VirtualizingItemsControl.ItemTemplate>
                             </ui:VirtualizingItemsControl>
                         </StackPanel>
-                    </ui:CardExpander>
+                    </Grid></ScrollViewer></TabItem><TabItem Header="{ext:Loc StartupManager.Tasks.Title}"><ScrollViewer HorizontalScrollBarVisibility="Disabled"><Grid Margin="0,16,0,0">
 
-                    <!--  ═══════════ Scheduled Tasks Section ═══════════  -->
-                    <ui:CardExpander
-                        Margin="0,0,0,12"
-                        Icon="{ui:SymbolIcon TabDesktopArrowClockwise24}"
-                        IsExpanded="True"
-                        Visibility="{Binding ViewModel.HasTasks, Converter={StaticResource BooleanToVisibilityConverter}}">
-                        <ui:CardExpander.Header>
-                            <StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <ui:TextBlock
-                                        VerticalAlignment="Center"
-                                        FontTypography="BodyStrong"
-                                        Text="{ext:Loc StartupManager.Tasks.Title}" />
-                                    <Border
-                                        Margin="8,0,0,0"
-                                        Padding="8,2"
-                                        VerticalAlignment="Center"
-                                        Style="{StaticResource SubtlePillStyle}">
-                                        <ui:TextBlock
-                                            VerticalAlignment="Center"
-                                            Foreground="{DynamicResource TextFillColorTertiaryBrush}"
-                                            FontTypography="Caption"
-                                            Text="{ext:Loc StartupManager.Tasks.CountSuffix,
-                                                           {Binding ViewModel.Tasks.Count}}" />
-                                    </Border>
-                                </StackPanel>
-                                <ui:TextBlock
-                                    Margin="0,4,0,0"
-                                    FontTypography="Caption"
-                                    Foreground="{DynamicResource TextFillColorSecondaryBrush}"
-                                    Text="{ext:Loc StartupManager.Tasks.Description}"
-                                    TextWrapping="Wrap" />
-                            </StackPanel>
-                        </ui:CardExpander.Header>
 
                         <StackPanel>
                             <!--  Tasks Toolbar  -->
@@ -411,7 +343,7 @@
                                                     <ui:TextBlock
                                                         Margin="0,2,0,0"
                                                         FontTypography="Caption"
-                                                        Foreground="{DynamicResource TextFillColorDisabledBrush}"
+                                                        Foreground="{DynamicResource TextFillColorSecondaryBrush}"
                                                         Text="{Binding TaskPath}"
                                                         Visibility="{Binding TaskPath, Converter={StaticResource NotEmptyToVisibilityConverter}}" />
                                                     <controls:TriggerBadgeList
@@ -421,7 +353,7 @@
                                                     <ui:TextBlock
                                                         Margin="0,2,0,0"
                                                         FontTypography="Caption"
-                                                        Foreground="{DynamicResource TextFillColorDisabledBrush}"
+                                                        Foreground="{DynamicResource TextFillColorSecondaryBrush}"
                                                         Text="{Binding ActionSummary}"
                                                         TextTrimming="CharacterEllipsis"
                                                         Visibility="{Binding ActionSummary, Converter={StaticResource NotEmptyToVisibilityConverter}}" />
@@ -432,6 +364,7 @@
                                                     VerticalAlignment="Center"
                                                     Orientation="Horizontal">
                                                     <ui:ToggleSwitch
+                                                        AutomationProperties.Name="{Binding TaskName}"
                                                         IsChecked="{Binding IsEnabled, Mode=TwoWay}"
                                                         OffContent="{ext:Loc Common.Toggle.Off}"
                                                         OnContent="{ext:Loc Common.Toggle.On}" />
@@ -453,9 +386,7 @@
                                 </ui:VirtualizingItemsControl.ItemTemplate>
                             </ui:VirtualizingItemsControl>
                         </StackPanel>
-                    </ui:CardExpander>
-                </StackPanel>
-            </ScrollViewer>
+                    </Grid></ScrollViewer></TabItem></TabControl>
         </Border>
     </Grid>
 </Page>

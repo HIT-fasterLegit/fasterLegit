@@ -4,11 +4,11 @@
 
 ## 1. Acceptance of Terms
 
-By downloading, installing, or using **fasterLegit** (the "Application"), you agree to be bound by these Terms of Service. If you do not agree, do not use the Application.
+By downloading, installing, or using **VELORA** (the "Application"), you agree to be bound by these Terms of Service. If you do not agree, do not use the Application.
 
 ## 2. Free & Open Source
 
-fasterLegit is a **completely free and open-source** project licensed under the [GNU General Public License v3.0](./LICENSE). You are free to:
+VELORA is a **completely free and open-source** project licensed under the [GNU General Public License v3.0](./LICENSE). You are free to:
 
 - ✅ Use the Application in compliance with applicable laws and regulations.
 - ✅ **Study** the source code
@@ -60,7 +60,7 @@ Before applying any optimizations, we strongly recommend:
 
 ## 7. Third-Party Content
 
-fasterLegit may reference or interact with:
+VELORA may reference or interact with:
 
 - Windows operating system components
 - Third-party software installed on your system
@@ -80,10 +80,8 @@ These Terms shall be governed by and construed in accordance with the laws of th
 
 For questions about these Terms:
 
-- 🐛 Open an [Issue](https://github.com/itsfatduck/fasterLegit/issues)
-- 💬 Join our [Discord](https://discord.gg/tDUBDCYw9Q)
-- 🌐 Visit [fasterLegit.vercel.app](https://fasterLegit.vercel.app/)
+Contact the team responsible for this VELORA demonstration build.
 
 ---
 
-**By using fasterLegit, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.**
+**By using VELORA, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.**

@@ -3,13 +3,13 @@
 **Last Updated:** April 5, 2026
 
 > [!TIP]
-> **TL;DR: fasterLegit does not collect, track, or transmit your personal data. Everything runs locally on your machine.**
+> **TL;DR: VELORA does not collect, track, or transmit your personal data. Everything runs locally on your machine.**
 
 ---
 
 ## Our Commitment
 
-**fasterLegit respects your privacy. Period.**
+**VELORA respects your privacy. Period.**
 
 We believe system optimization tools should improve your PC without compromising your data. This Privacy Policy explains what information is (and is not) handled by the Application.
 
@@ -17,7 +17,7 @@ We believe system optimization tools should improve your PC without compromising
 
 ## What We DON'T Collect
 
-Under normal operation, fasterLegit does **not collect, store, or transmit** any of the following:
+Under normal operation, VELORA does **not collect, store, or transmit** any of the following:
 
 | Category                    | Status          |
 | --------------------------- | --------------- |
@@ -38,7 +38,7 @@ Under normal operation, fasterLegit does **not collect, store, or transmit** any
 
 ## What Happens on Your Machine
 
-fasterLegit runs **entirely locally** on your Windows system:
+VELORA runs **entirely locally** on your Windows system:
 
 - 🔧 Optimizations are applied directly to your local system (e.g., registry and settings)
 - 💾 Configuration data is stored locally on your device
@@ -49,7 +49,7 @@ fasterLegit runs **entirely locally** on your Windows system:
 
 ## Open Source Transparency
 
-The source code of fasterLegit is publicly available:
+The source code of VELORA is publicly available:
 
 - 🔍 Anyone can audit the code
 - 🔍 No hidden data collection mechanisms
@@ -68,7 +68,7 @@ The Application itself does not rely on third-party services. However, external 
 - 💬 **Discord**: Community interactions are subject to Discord's Privacy Policy
 - 🌐 **Website**: Visiting the project website is subject to that site's policies
 
-These services are independent and not controlled by fasterLegit.
+These services are independent and not controlled by VELORA.
 
 ---
 
@@ -82,6 +82,4 @@ This Privacy Policy may be updated from time to time. Updates will be reflected 
 
 For any privacy-related questions:
 
-- 🐛 Open an Issue on GitHub
-- 💬 Join our Discord community
-- 🌐 Visit our website
+Contact the team responsible for this VELORA demonstration build.

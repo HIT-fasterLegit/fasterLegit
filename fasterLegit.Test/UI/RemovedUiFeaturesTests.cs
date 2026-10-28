@@ -18,6 +18,24 @@ namespace fasterLegit.Test.UI;
 public class RemovedUiFeaturesTests
 {
     [Fact]
+    public void Dashboard_ExternalReleasePromotion_IsNotAvailable()
+    {
+        Assert.Null(typeof(DashboardViewModel).GetProperty("IsUpdateInfoOpen"));
+        Assert.Null(typeof(DashboardViewModel).GetProperty("LatestVersion"));
+        Assert.DoesNotContain(
+            typeof(DashboardViewModel).GetConstructors().Single().GetParameters(),
+            parameter => parameter.ParameterType == typeof(UpdaterService)
+        );
+    }
+
+    [Fact]
+    public void Welcome_DocumentsAreLocal_ExternalCommunityCommandsAreNotAvailable()
+    {
+        Assert.Null(typeof(LegalDialogViewModel).GetProperty("OpenWebsiteCommand"));
+        Assert.NotNull(typeof(LegalDialogViewModel).GetProperty("OpenDocumentCommand"));
+    }
+
+    [Fact]
     public void Dashboard_LinkCommand_IsNotAvailable()
     {
         Assert.Null(typeof(DashboardViewModel).GetProperty("OpenActionCommand"));

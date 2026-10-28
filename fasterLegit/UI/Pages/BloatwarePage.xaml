@@ -56,7 +56,7 @@
             Title="{ext:Loc Bloatware.Loading}" />
 
         <Border Grid.Row="1" Visibility="{Binding ViewModel.HasData, Converter={StaticResource BooleanToVisibilityConverter}}">
-            <Grid RowDefinitions="Auto,Auto,*">
+            <Grid RowDefinitions="Auto,*,Auto">
                 <!--  Search / Filter / Sort toolbar  -->
                 <Border Grid.Row="0" Style="{StaticResource ToolbarSurfaceStyle}">
                     <WrapPanel Orientation="Horizontal">
@@ -152,10 +152,10 @@
                     </WrapPanel>
                 </Border>
 
-                <!--  Action buttons  -->
-                <StackPanel
-                    Grid.Row="1"
-                    Margin="0,0,0,12"
+                <!--  Batch action dock  -->
+                <WrapPanel
+                    Grid.Row="2"
+                    Margin="0,16,0,0"
                     Orientation="Horizontal">
                     <ui:Button
                         Appearance="Danger"
@@ -205,17 +205,17 @@
                         Cursor="Hand"
                         Icon="{ui:SymbolIcon ArrowClockwise24,
                                              FontSize=18}" />
-                </StackPanel>
+                </WrapPanel>
 
                 <!--  No search results  -->
                 <controls:EmptyStateView
-                    Grid.Row="2"
+                    Grid.Row="1"
                     Description="{ext:Loc Bloatware.Search.NoResults}"
                     Symbol="SearchInfo24"
                     Visibility="{Binding ViewModel.AppxPackages.Count, Converter={StaticResource ZeroToVisibilityConverter}}" />
 
                 <ItemsControl
-                    Grid.Row="2"
+                    Grid.Row="1"
                     ItemsSource="{Binding ViewModel.AppxPackages}"
                     Visibility="{Binding ViewModel.AppxPackages.Count, Converter={StaticResource GreaterThanZeroToVisibilityConverter}}">
                     <ItemsControl.Template>
@@ -244,6 +244,7 @@
 
                                     <!--  Checkbox  -->
                                     <CheckBox
+                                    AutomationProperties.Name="{Binding Name}"
                                         Grid.Column="0"
                                         Margin="0,4,12,0"
                                         VerticalAlignment="Top"
@@ -275,7 +276,7 @@
                                                 <!--  Version  -->
                                                 <ui:TextBlock
                                                     VerticalAlignment="Center"
-                                                    Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                                                    Foreground="{DynamicResource TextFillColorSecondaryBrush}"
                                                     FontTypography="Body"
                                                     Text="{Binding Version}" />
                                             </Border>
@@ -287,11 +288,13 @@
                                                 Visibility="{Binding ShouldVisibleRisk, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                         </DockPanel>
 
+                                        <Expander Margin="0,8,0,0" Header="{ext:Loc Brand.AppDetails}">
+                                            <StackPanel Margin="0,8,0,0">
                                         <!--  Publisher  -->
                                         <ui:TextBlock
                                             Margin="0,2,0,0"
                                             FontTypography="Body"
-                                            Foreground="{DynamicResource TextFillColorDisabledBrush}"
+                                            Foreground="{DynamicResource TextFillColorSecondaryBrush}"
                                             Text="{Binding Publisher}"
                                             TextTrimming="CharacterEllipsis" />
 
@@ -299,7 +302,7 @@
                                         <ui:TextBlock
                                             Margin="0,2,0,0"
                                             FontTypography="Body"
-                                            Foreground="{DynamicResource TextFillColorDisabledBrush}"
+                                            Foreground="{DynamicResource TextFillColorSecondaryBrush}"
                                             Text="{Binding InstallLocation}"
                                             TextTrimming="CharacterEllipsis" />
 
@@ -310,6 +313,8 @@
                                             Foreground="{DynamicResource TextFillColorSecondaryBrush}"
                                             Text="{Binding PackageFullName}"
                                             TextTrimming="CharacterEllipsis" />
+                                            </StackPanel>
+                                        </Expander>
                                     </StackPanel>
                                 </Grid>
                             </Border>

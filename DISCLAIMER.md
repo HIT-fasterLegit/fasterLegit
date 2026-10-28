@@ -4,13 +4,13 @@
 
 ## General Disclaimer
 
-fasterLegit is an open-source Windows optimization tool provided **"as is"** and **"as available"**, without any warranties or guarantees of any kind, whether express or implied.
+VELORA is an open-source Windows optimization tool provided **"as is"** and **"as available"**, without any warranties or guarantees of any kind, whether express or implied.
 
 ---
 
 ## ⚠️ Important Notice
 
-**Using fasterLegit modifies your Windows system settings.** These changes may affect system behavior, stability, and compatibility. By using this tool, you acknowledge and accept the following:
+**Using VELORA modifies your Windows system settings.** These changes may affect system behavior, stability, and compatibility. By using this tool, you acknowledge and accept the following:
 
 ### 1. No Warranty
 
@@ -53,7 +53,7 @@ The optimizations and recommendations provided are based on general practices an
 
 ### 5. Windows Version Compatibility
 
-fasterLegit is designed for **Windows 10 and later**. Behavior may vary depending on:
+VELORA is designed for **Windows 10 and later**. Behavior may vary depending on:
 
 - Windows version and edition
 - System configuration
@@ -63,7 +63,7 @@ Compatibility is **not guaranteed** across all environments.
 
 ### 6. Third-Party References
 
-fasterLegit may reference or be inspired by community research, third-party tools, or publicly available documentation.
+VELORA may reference or be inspired by community research, third-party tools, or publicly available documentation.
 
 We are **not affiliated with or endorsed by** Microsoft or any third-party entities. All trademarks belong to their respective owners.
 
@@ -73,7 +73,7 @@ You agree to use the Application in compliance with all applicable laws and regu
 
 ### 8. Use at Your Own Risk
 
-**This is the bottom line:** fasterLegit modifies system-level settings. While we make reasonable efforts to ensure safety, **you use this tool entirely at your own risk**.
+**This is the bottom line:** VELORA modifies system-level settings. While we make reasonable efforts to ensure safety, **you use this tool entirely at your own risk**.
 
 If you are not comfortable modifying system settings, **do not use this Application**.
 
@@ -81,6 +81,6 @@ If you are not comfortable modifying system settings, **do not use this Applicat
 
 ## Acknowledgment
 
-By downloading, installing, or using fasterLegit, you acknowledge that you have read and understood this Disclaimer and agree to its terms.
+By downloading, installing, or using VELORA, you acknowledge that you have read and understood this Disclaimer and agree to its terms.
 
 If you do not agree, do not use the Application.

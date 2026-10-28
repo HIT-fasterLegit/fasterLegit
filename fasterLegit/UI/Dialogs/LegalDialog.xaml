@@ -71,7 +71,7 @@
             Margin="0,12,0,0"
             Style="{StaticResource ToolbarSurfaceStyle}">
             <WrapPanel Orientation="Horizontal">
-                <ui:HyperlinkButton
+                <ui:Button
                     Margin="0,0,8,0"
                     VerticalContentAlignment="Center"
                     Content="{ext:Loc LegalDialog.Link.TermsOfService}"
@@ -79,130 +79,23 @@
                     Icon="{ui:SymbolIcon DocumentText24,
                                          FontSize=18,
                                          Filled=True}"
-                    NavigateUri="https://github.com/itsfatduck/fasterLegit/blob/master/TERMS.md" />
-                <ui:HyperlinkButton
+                    Command="{Binding OpenDocumentCommand}" CommandParameter="TERMS.md" />
+                <ui:Button
                     Margin="0,0,8,0"
                     Content="{ext:Loc LegalDialog.Link.PrivacyPolicy}"
                     FontWeight="SemiBold"
                     Icon="{ui:SymbolIcon ShieldLock24,
                                          FontSize=18,
                                          Filled=True}"
-                    NavigateUri="https://github.com/itsfatduck/fasterLegit/blob/master/PRIVACY.md" />
-                <ui:HyperlinkButton
+                    Command="{Binding OpenDocumentCommand}" CommandParameter="PRIVACY.md" />
+                <ui:Button
                     Content="{ext:Loc LegalDialog.Link.Disclaimer}"
                     FontWeight="SemiBold"
                     Icon="{ui:SymbolIcon Warning24,
                                          FontSize=18,
                                          Filled=True}"
-                    NavigateUri="https://github.com/itsfatduck/fasterLegit/blob/master/DISCLAIMER.md" />
+                    Command="{Binding OpenDocumentCommand}" CommandParameter="DISCLAIMER.md" />
             </WrapPanel>
-        </Border>
-
-        <!--  Extras, small, fluent supplements (compact like Settings About)  -->
-        <Border
-            Grid.Row="3"
-            Margin="0,12,0,0"
-            Padding="0"
-            Background="Transparent"
-            BorderThickness="0">
-            <StackPanel>
-                <ui:TextBlock
-                    Margin="0,0,0,8"
-                    FontTypography="Caption"
-                    Foreground="{DynamicResource TextFillColorSecondaryBrush}"
-                    Text="{ext:Loc LegalDialog.Extras.Header}" />
-                <UniformGrid Columns="2" Rows="1">
-                    <ui:CardAction
-                        Margin="0,0,4,0"
-                        Padding="12,10"
-                        Command="{Binding OpenWebsiteCommand}"
-                        CommandParameter="GitHub"
-                        Cursor="Hand"
-                        IsChevronVisible="False">
-                        <ui:CardAction.Icon>
-                            <ui:ImageIcon Height="20" Source="{Binding CurrentApplicationTheme, Converter={StaticResource ThemeToGitHubIconConverter}}" />
-                        </ui:CardAction.Icon>
-                        <StackPanel>
-                            <ui:TextBlock
-                                FontTypography="Caption"
-                                FontWeight="SemiBold"
-                                Text="{ext:Loc LegalDialog.Extras.GitHub.Title}" />
-                            <ui:TextBlock
-                                FontTypography="Caption"
-                                Foreground="{DynamicResource TextFillColorSecondaryBrush}"
-                                Text="{ext:Loc LegalDialog.Extras.GitHub.Description}"
-                                TextWrapping="Wrap" />
-                        </StackPanel>
-                    </ui:CardAction>
-                    <ui:CardAction
-                        Margin="4,0,0,0"
-                        Padding="12,10"
-                        Command="{Binding OpenWebsiteCommand}"
-                        CommandParameter="Documentation"
-                        Cursor="Hand"
-                        Icon="{ui:SymbolIcon Book24}"
-                        IsChevronVisible="False">
-                        <StackPanel>
-                            <ui:TextBlock
-                                FontTypography="Caption"
-                                FontWeight="SemiBold"
-                                Text="{ext:Loc LegalDialog.Extras.Docs.Title}" />
-                            <ui:TextBlock
-                                FontTypography="Caption"
-                                Foreground="{DynamicResource TextFillColorSecondaryBrush}"
-                                Text="{ext:Loc LegalDialog.Extras.Docs.Description}"
-                                TextWrapping="Wrap" />
-                        </StackPanel>
-                    </ui:CardAction>
-                </UniformGrid>
-                <UniformGrid
-                    Margin="0,8,0,0"
-                    Columns="2"
-                    Rows="1">
-                    <ui:CardAction
-                        Margin="0,0,4,0"
-                        Padding="12,10"
-                        Command="{Binding OpenWebsiteCommand}"
-                        CommandParameter="Discord"
-                        Cursor="Hand"
-                        IsChevronVisible="False">
-                        <ui:CardAction.Icon>
-                            <ui:ImageIcon Height="16" Source="pack://application:,,,/Resources/Images/DiscordLogo.png" />
-                        </ui:CardAction.Icon>
-                        <StackPanel>
-                            <ui:TextBlock
-                                FontTypography="Caption"
-                                FontWeight="SemiBold"
-                                Text="{ext:Loc LegalDialog.Extras.Discord.Title}" />
-                            <ui:TextBlock
-                                FontTypography="Caption"
-                                Foreground="{DynamicResource TextFillColorSecondaryBrush}"
-                                Text="{ext:Loc LegalDialog.Extras.Discord.Description}"
-                                TextWrapping="Wrap" />
-                        </StackPanel>
-                    </ui:CardAction>
-                    <ui:CardAction
-                        Margin="4,0,0,0"
-                        Padding="12,10"
-                        Command="{Binding OpenWebsiteCommand}"
-                        CommandParameter="Acknowledgements"
-                        Cursor="Hand"
-                        Icon="{ui:SymbolIcon Heart24}"
-                        IsChevronVisible="False">
-                        <StackPanel>
-                            <ui:TextBlock
-                                FontTypography="Caption"
-                                FontWeight="SemiBold"
-                                Text="{ext:Loc LegalDialog.Extras.Acknowledgements.Title}" />
-                            <ui:TextBlock
-                                FontTypography="Caption"
-                                Foreground="{DynamicResource TextFillColorSecondaryBrush}"
-                                Text="{ext:Loc LegalDialog.Extras.Acknowledgements.Description}"
-                                TextWrapping="Wrap" />
-                        </StackPanel>
-                    </ui:CardAction>
-                </UniformGrid>
-            </StackPanel>
         </Border>
 
         <ui:InfoBar

@@ -21,7 +21,17 @@
     </Page.Resources>
 
     <ScrollViewer>
-        <StackPanel>
+        <Grid ColumnDefinitions="240,*">
+            <Border VerticalAlignment="Top" Margin="0,0,24,0" Style="{StaticResource BrandIntroStyle}">
+                <StackPanel>
+                    <Image Width="64" Height="64" HorizontalAlignment="Left" Margin="0,0,0,16" Source="pack://application:,,,/Resources/Images/VeloraMark.png" />
+                    <StackPanel VerticalAlignment="Center">
+                        <ui:TextBlock FontSize="24" FontWeight="SemiBold" Text="{ext:Loc Brand.Name}" />
+                        <ui:TextBlock Style="{StaticResource CaptionTextStyle}" Text="{ext:Loc Brand.Tagline}" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <StackPanel Grid.Column="1">
             <ui:TextBlock Style="{StaticResource PageTitleStyle}" Text="{ext:Loc Settings.Header.Title}" />
 
             <StackPanel Style="{StaticResource SettingsSectionStyle}">
@@ -100,6 +110,7 @@
                     </Grid>
                 </ui:CardAction>
             </StackPanel>
-        </StackPanel>
+            </StackPanel>
+        </Grid>
     </ScrollViewer>
 </Page>

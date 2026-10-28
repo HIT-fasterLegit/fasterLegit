@@ -54,25 +54,18 @@ public partial class LegalDialogViewModel(
     }
 
     [RelayCommand]
-    private void OpenWebsite(string type)
+    private void OpenDocument(string name)
     {
+        if (name is not ("TERMS.md" or "PRIVACY.md" or "DISCLAIMER.md"))
+            return;
         try
         {
-            var url = type switch
-            {
-                "GitHub" => Shared.GitHubRepoURL,
-                "Documentation" or "Docs" => Shared.WebsiteURL + "docs/guides/getting-started",
-                "Discord" => Shared.DiscordInviteURL,
-                "Acknowledgements" => Shared.AcknowledgementsURL,
-                _ => null,
-            };
-            if (url == null)
-                return;
-            Process.Start(new ProcessStartInfo { FileName = url, UseShellExecute = true });
+            var path = System.IO.Path.Combine(AppContext.BaseDirectory, "Documents", name);
+            Process.Start(new ProcessStartInfo { FileName = path, UseShellExecute = true });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Failed to open link {Type}", type);
+            logger.LogError(ex, "Failed to open document {Name}", name);
         }
     }
 
