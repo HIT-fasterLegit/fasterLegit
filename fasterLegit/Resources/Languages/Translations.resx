@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
         Microsoft ResX Schema 
@@ -113,10 +113,10 @@
         </value>
   </resheader>
   <data name="Dashboard.Header.Title" xml:space="preserve">
-    <value>Dashboard</value>
+    <value>System overview</value>
   </data>
   <data name="Sidebar.Dashboard" xml:space="preserve">
-    <value>Dashboard</value>
+    <value>Overview</value>
   </data>
   <data name="Sidebar.Settings" xml:space="preserve">
     <value>Settings</value>
@@ -152,7 +152,7 @@
     <value>Fetching System Information...</value>
   </data>
   <data name="Sidebar.Optimize" xml:space="preserve">
-    <value>Optimize</value>
+    <value>System tuning</value>
   </data>
   <data name="Customize.Description" xml:space="preserve">
     <value>Personalize Windows settings and everyday behavior.</value>
@@ -200,7 +200,7 @@
     <value>OK</value>
   </data>
   <data name="Settings.Header.Title" xml:space="preserve">
-    <value>Settings</value>
+    <value>Make VELORA yours</value>
   </data>
   <data name="Settings.Appearance.Header" xml:space="preserve">
     <value>Appearance</value>
@@ -263,10 +263,10 @@
     <value>Failed to detect the current active power plan.</value>
   </data>
   <data name="Optimizer.PowerManagement.InstallFasterLegitPowerPlan.Error.ImportFailed" xml:space="preserve">
-    <value>Failed to import fasterLegit's power plan.</value>
+    <value>Failed to import VELORA's power plan.</value>
   </data>
   <data name="Optimizer.PowerManagement.InstallFasterLegitPowerPlan.Error.ActivateFailed" xml:space="preserve">
-    <value>Failed to activate fasterLegit's power plan.</value>
+    <value>Failed to activate VELORA's power plan.</value>
   </data>
   <data name="Optimizer.UI.Tags.System" xml:space="preserve">
     <value>System</value>
@@ -352,7 +352,7 @@
     <value>Failed to restore previous power plan: {0}.</value>
   </data>
   <data name="Revert.PowerPlan.Error.DeleteFailed" xml:space="preserve">
-    <value>Failed to delete fasterLegit power plan: {0}</value>
+    <value>Failed to delete VELORA power plan: {0}</value>
   </data>
   <data name="Revert.PowerPlan.Error.NothingToDo" xml:space="preserve">
     <value>Nothing to revert: no previous or installed power plan recorded.</value>
@@ -1041,7 +1041,7 @@
     <value>Acknowledgments</value>
   </data>
   <data name="Settings.About.Acknowledgements.Description" xml:space="preserve">
-    <value>fasterLegit is made possible by the following open-source software and resources.</value>
+    <value>VELORA is made possible by the following open-source software and resources.</value>
   </data>
   <data name="RestorePoint.Title" xml:space="preserve">
     <value>System Restore</value>
@@ -1051,7 +1051,7 @@
 It's a safety measure to protect your Windows before applying changes.</value>
   </data>
   <data name="RestorePointDialog.Help" xml:space="preserve">
-    <value>The application will automatically enable System Restore and create a checkpoint named "fasterLegit...".
+    <value>The application will automatically enable System Restore and create a checkpoint named "VELORA...".
 This ensures you can always go back if anything goes wrong.</value>
   </data>
   <data name="RestorePoint.Snackbar.Error.Title" xml:space="preserve">
@@ -1097,7 +1097,7 @@ This ensures you can always go back if anything goes wrong.</value>
     <value>Removing {0} ({1}/{2})</value>
   </data>
   <data name="Bloatware.Header.Title" xml:space="preserve">
-    <value>Bloatware</value>
+    <value>Your app library</value>
   </data>
   <data name="Bloatware.Menu.Remove" xml:space="preserve">
     <value>Remove ({0})</value>
@@ -1109,7 +1109,7 @@ This ensures you can always go back if anything goes wrong.</value>
     <value>No unnecessary apps found ¯\_(ツ)_/¯</value>
   </data>
   <data name="Bloatware.Empty.Description" xml:space="preserve">
-    <value>fasterLegit didn't find any removable AppX packages. It's empty as a void...</value>
+    <value>VELORA didn't find any removable AppX packages. It's empty as a void...</value>
   </data>
   <data name="Bloatware.Loading" xml:space="preserve">
     <value>Looking for removable apps...</value>
@@ -1118,7 +1118,7 @@ This ensures you can always go back if anything goes wrong.</value>
     <value>This may take a moment while the application scans for installed packages.</value>
   </data>
   <data name="Sidebar.Bloatware" xml:space="preserve">
-    <value>Bloatware</value>
+    <value>Applications</value>
   </data>
   <data name="BloatwareDialog.Confirmation.Title" xml:space="preserve">
     <value>Remove {0} App(s)?</value>
@@ -1148,7 +1148,7 @@ This ensures you can always go back if anything goes wrong.</value>
     <value>When removing installed AppX packages, also remove the corresponding Provisioned packages to prevent automatic reinstallation for new users.</value>
   </data>
   <data name="Dashboard.UpdateInfoBar.Message" xml:space="preserve">
-    <value>fasterLegit (v{0}) is available!
+    <value>VELORA (v{0}) is available!
 Update now to enjoy the latest features, improvements, and bug fixes.</value>
   </data>
   <data name="Common.Search.Placeholder" xml:space="preserve">
@@ -1194,13 +1194,13 @@ Update now to enjoy the latest features, improvements, and bug fixes.</value>
     <value>Sort by</value>
   </data>
   <data name="Sidebar.DiskCleanup" xml:space="preserve">
-    <value>Disk Cleanup</value>
+    <value>Storage cleanup</value>
   </data>
   <data name="DiskCleanup.Header.Title" xml:space="preserve">
-    <value>Disk Cleanup</value>
+    <value>Make room for what matters</value>
   </data>
   <data name="DiskCleanup.Header.Description" xml:space="preserve">
-    <value>Free up disk space by removing temporary files and cache</value>
+    <value>Review temporary files before choosing what to remove.</value>
   </data>
   <data name="DiskCleanup.TotalSpace" xml:space="preserve">
     <value>Total reclaimable space</value>
@@ -1401,7 +1401,7 @@ Update now to enjoy the latest features, improvements, and bug fixes.</value>
     <value>NVMe</value>
   </data>
   <data name="Bloatware.Header.Description" xml:space="preserve">
-    <value>Manage and remove pre-installed applications that you don't need</value>
+    <value>Find installed apps, review what you need and remove the rest.</value>
   </data>
   <data name="DiskCleanup.Button.Clean" xml:space="preserve">
     <value>Clean</value>
@@ -1431,13 +1431,13 @@ Update now to enjoy the latest features, improvements, and bug fixes.</value>
       <value>Need help?</value>
     </data>
   <data name="Sidebar.StartupManager" xml:space="preserve">
-    <value>Startup Manager</value>
+    <value>Startup control</value>
   </data>
   <data name="StartupManager.Header.Title" xml:space="preserve">
-    <value>Startup Manager</value>
+    <value>Take control of startup</value>
   </data>
   <data name="StartupManager.Header.Description" xml:space="preserve">
-    <value>Manage applications and tasks that run automatically when Windows starts.</value>
+    <value>Review what launches with Windows and choose what stays active.</value>
   </data>
   <data name="OptimizationDetailsDialog.Other" xml:space="preserve">
     <value>Other</value>
@@ -1811,7 +1811,7 @@ Update now to enjoy the latest features, improvements, and bug fixes.</value>
     <value>Legal Agreement</value>
   </data>
   <data name="LegalDialog.Intro.Title" xml:space="preserve">
-    <value>Welcome to fasterLegit!</value>
+    <value>Welcome to VELORA!</value>
   </data>
   <data name="LegalDialog.Intro.Description" xml:space="preserve">
     <value>Choose your language and theme, take a moment to review our Terms, Privacy Policy, and Disclaimer, then you're ready to go.</value>
@@ -2011,7 +2011,7 @@ Update now to enjoy the latest features, improvements, and bug fixes.</value>
     <value>Compatibility check failed</value>
   </data>
   <data name="Condition.Error.Description" xml:space="preserve">
-    <value>fasterLegit could not determine whether this item is supported on your system.</value>
+    <value>VELORA could not determine whether this item is supported on your system.</value>
   </data>
   <data name="Condition.Windows11.Title" xml:space="preserve">
     <value>Windows 11 required</value>
@@ -2500,7 +2500,7 @@ Update now to enjoy the latest features, improvements, and bug fixes.</value>
     <value>Show the record file</value>
   </data>
   <data name="OptimizationDetailsDialog.Other.OpenRecordFile.Description" xml:space="preserve">
-    <value>Reveals the file where fasterLegit wrote what this optimization did. It stays after a revert, so the history is still there.</value>
+    <value>Reveals the file where VELORA wrote what this optimization did. It stays after a revert, so the history is still there.</value>
   </data>
   <data name="Optimizer.Details.Provider.Registry" xml:space="preserve">
     <value>Registry</value>
@@ -2577,4 +2577,23 @@ Update now to enjoy the latest features, improvements, and bug fixes.</value>
   <data name="Error.Unhandled.LogHint" xml:space="preserve">
     <value>Details are in the log file.</value>
   </data>
+  <data name="Brand.Name" xml:space="preserve">
+    <value>VELORA</value>
+  </data>
+  <data name="Brand.Tagline" xml:space="preserve">
+    <value>Your Windows. In focus.</value>
+  </data>
+  <data name="Brand.Overview.Title" xml:space="preserve">
+    <value>A clearer view of your PC.</value>
+  </data>
+  <data name="Brand.Overview.Description" xml:space="preserve">
+    <value>Understand your hardware, review changes and keep your system in order.</value>
+  </data>
+  <data name="Brand.Optimize.Title" xml:space="preserve">
+    <value>Tune your workspace</value>
+  </data>
+  <data name="Brand.Optimize.Description" xml:space="preserve">
+    <value>Review each change, check its risk and apply only what fits your system.</value>
+  </data>
+  <data name="Brand.AppDetails" xml:space="preserve"><value>Package details</value></data>
 </root>

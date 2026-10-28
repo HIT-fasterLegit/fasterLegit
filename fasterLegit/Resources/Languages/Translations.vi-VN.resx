@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   
   <xsd:schema id="root">
@@ -64,7 +64,7 @@
         </value>
   </resheader>
   <data name="Dashboard.Header.Title" xml:space="preserve">
-    <value>Dashboard</value>
+    <value>Tổng quan hệ thống</value>
   </data>
   <data name="Optimizer.AI.DisableRecall.ShortDescription" xml:space="preserve">
     <value>Tắt tính năng AI Windows Recall, tính năng chụp và lập chỉ mục ảnh chụp màn hình. Đồng thời gỡ bỏ thành phần Recall và xóa các ảnh chụp đã lưu trữ trước đó; cần khởi động lại máy để có hiệu lực.</value>
@@ -73,7 +73,7 @@
     <value>Tắt nguồn cấp tin tức và sở thích (News and Interests) và ẩn nút của nó trên thanh tác vụ (Windows 10), đồng thời vô hiệu hóa bảng Widgets (Windows 11).</value>
   </data>
   <data name="Sidebar.Dashboard" xml:space="preserve">
-    <value>Dashboard</value>
+    <value>Tổng quan</value>
   </data>
   <data name="Sidebar.Settings" xml:space="preserve">
     <value>Cài đặt</value>
@@ -109,7 +109,7 @@
     <value>Đang lấy thông tin hệ thống...</value>
   </data>
   <data name="Sidebar.Optimize" xml:space="preserve">
-    <value>Tối ưu</value>
+    <value>Tinh chỉnh</value>
   </data>
   <data name="Customize.Description" xml:space="preserve">
     <value>Tùy chỉnh cài đặt và cách Windows hoạt động hằng ngày.</value>
@@ -151,7 +151,7 @@
     <value>OK</value>
   </data>
   <data name="Settings.Header.Title" xml:space="preserve">
-    <value>Cài đặt</value>
+    <value>VELORA theo cách của bạn</value>
   </data>
   <data name="Settings.Appearance.Header" xml:space="preserve">
     <value>Giao diện</value>
@@ -217,10 +217,10 @@
     <value>Không thể phát hiện power plan đang hoạt động hiện tại.</value>
   </data>
   <data name="Optimizer.PowerManagement.InstallFasterLegitPowerPlan.Error.ImportFailed" xml:space="preserve">
-    <value>Không thể nhập power plan của fasterLegit.</value>
+    <value>Không thể nhập power plan của VELORA.</value>
   </data>
   <data name="Optimizer.PowerManagement.InstallFasterLegitPowerPlan.Error.ActivateFailed" xml:space="preserve">
-    <value>Không thể kích hoạt power plan của fasterLegit.</value>
+    <value>Không thể kích hoạt power plan của VELORA.</value>
   </data>
   <data name="Optimizer.UI.Tags.System" xml:space="preserve">
     <value>Hệ thống</value>
@@ -805,7 +805,7 @@
     <value>Ghi nhận đóng góp</value>
   </data>
   <data name="Settings.About.Acknowledgements.Description" xml:space="preserve">
-    <value>fasterLegit được xây dựng nhờ các phần mềm và tài nguyên nguồn mở.</value>
+    <value>VELORA được xây dựng nhờ các phần mềm và tài nguyên nguồn mở.</value>
   </data>
   <data name="RestorePoint.Title" xml:space="preserve">
     <value>Phục hồi hệ thống</value>
@@ -815,7 +815,7 @@
 Đây là cách an toàn nhất để bảo vệ máy tính của bạn khi tối ưu hóa.</value>
   </data>
   <data name="RestorePointDialog.Help" xml:space="preserve">
-    <value>Ứng dụng sẽ tự động kích hoạt và tạo một điểm khôi phục mới mang tên "fasterLegit...".
+    <value>Ứng dụng sẽ tự động kích hoạt và tạo một điểm khôi phục mới mang tên "VELORA...".
 Hãy yên tâm rằng hệ thống của bạn luôn có đường lui nếu có sự cố xảy ra.</value>
   </data>
   <data name="RestorePoint.Snackbar.Error.Title" xml:space="preserve">
@@ -861,7 +861,7 @@ Hãy yên tâm rằng hệ thống của bạn luôn có đường lui nếu có
     <value>Đang gỡ {0} ({1}/{2})</value>
   </data>
   <data name="Bloatware.Header.Title" xml:space="preserve">
-    <value>Bloatware</value>
+    <value>Thư viện ứng dụng</value>
   </data>
   <data name="Bloatware.Menu.Remove" xml:space="preserve">
     <value>Gỡ ({0})</value>
@@ -873,7 +873,7 @@ Hãy yên tâm rằng hệ thống của bạn luôn có đường lui nếu có
     <value>Không tìm thấy bất kì một ứng dụng nào ¯\_(ツ)_/¯</value>
   </data>
   <data name="Bloatware.Empty.Description" xml:space="preserve">
-    <value>fasterLegit không tìm thấy gói AppX nào có thể xóa. mọi thứ trống không như hư vô...</value>
+    <value>VELORA không tìm thấy gói AppX nào có thể xóa. mọi thứ trống không như hư vô...</value>
   </data>
   <data name="Bloatware.Loading" xml:space="preserve">
     <value>Đang tìm kiếm ứng dụng có thể gỡ...</value>
@@ -882,7 +882,7 @@ Hãy yên tâm rằng hệ thống của bạn luôn có đường lui nếu có
     <value>Quá trình này có thể mất một lúc khi ứng dụng quét các gói đã được cài đặt.</value>
   </data>
   <data name="Sidebar.Bloatware" xml:space="preserve">
-    <value>Bloatware</value>
+    <value>Ứng dụng</value>
   </data>
   <data name="BloatwareDialog.Confirmation.Title" xml:space="preserve">
     <value>Bạn có muốn xóa {0} ứng dụng?</value>
@@ -903,7 +903,7 @@ Hãy yên tâm rằng hệ thống của bạn luôn có đường lui nếu có
     <value>Khi xóa gói AppX đã cài đặt, cũng xóa luôn các gói Provisioned tương ứng để ngăn tự động cài lại cho người dùng mới.</value>
   </data>
   <data name="Dashboard.UpdateInfoBar.Message" xml:space="preserve">
-    <value>Đã có phiên bản fasterLegit (v{0})!
+    <value>Đã có phiên bản VELORA (v{0})!
 Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và sửa lỗi mới nhất.</value>
   </data>
   <data name="Common.Search.Placeholder" xml:space="preserve">
@@ -949,13 +949,13 @@ Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và
     <value>Sắp xếp theo</value>
   </data>
   <data name="Sidebar.DiskCleanup" xml:space="preserve">
-    <value>Dọn ổ đĩa</value>
+    <value>Dọn dẹp ổ đĩa</value>
   </data>
   <data name="DiskCleanup.Header.Title" xml:space="preserve">
-    <value>Dọn ổ đĩa</value>
+    <value>Thêm chỗ cho điều bạn cần</value>
   </data>
   <data name="DiskCleanup.Header.Description" xml:space="preserve">
-    <value>Giải phóng dung lượng ổ đĩa bằng cách xóa các tệp tạm và bộ nhớ đệm</value>
+    <value>Xem lại các tệp tạm trước khi chọn nội dung muốn xóa.</value>
   </data>
   <data name="DiskCleanup.TotalSpace" xml:space="preserve">
     <value>Tổng dung lượng có thể giải phóng</value>
@@ -1078,7 +1078,7 @@ Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và
     <value>{0} GB</value>
   </data>
   <data name="Bloatware.Header.Description" xml:space="preserve">
-    <value>Quản lý và gỡ bỏ các ứng dụng cài sẵn không cần thiết</value>
+    <value>Xem ứng dụng đã cài, giữ lại những gì cần thiết và gỡ phần còn lại.</value>
   </data>
   <data name="DiskCleanup.Button.Clean" xml:space="preserve">
     <value>Dọn dẹp</value>
@@ -1099,16 +1099,16 @@ Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và
     <value>Cần hỗ trợ?</value>
   </data>
   <data name="Sidebar.StartupManager" xml:space="preserve">
-    <value>Quản Lý Khởi Động</value>
+    <value>Quản lý khởi động</value>
   </data>
   <data name="Sidebar.ScheduledTasks" xml:space="preserve">
     <value>Tác Vụ Đã Lên Lịch</value>
   </data>
   <data name="StartupManager.Header.Title" xml:space="preserve">
-    <value>Quản Lý Khởi Động</value>
+    <value>Chủ động từ lúc khởi động</value>
   </data>
   <data name="StartupManager.Header.Description" xml:space="preserve">
-    <value>Quản lý các ứng dụng và tác vụ tự động chạy khi Windows khởi động.</value>
+    <value>Xem những gì chạy cùng Windows và chọn thành phần được phép hoạt động.</value>
   </data>
   <data name="OptimizationDetailsDialog.Other.OpenRevertFile.Description" xml:space="preserve">
     <value>Mở tệp JSON gốc chứa dữ liệu khôi phục cho tính năng tối ưu hóa này.</value>
@@ -1456,7 +1456,7 @@ Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và
     <value>Thỏa thuận pháp lý</value>
   </data>
   <data name="LegalDialog.Intro.Title" xml:space="preserve">
-    <value>Chào mừng đến với fasterLegit!</value>
+    <value>Chào mừng đến với VELORA!</value>
   </data>
   <data name="LegalDialog.Intro.Description" xml:space="preserve">
     <value>Chọn ngôn ngữ và giao diện của bạn, dành chút thời gian xem qua Điều khoản, Chính sách Bảo mật và Tuyên bố miễn trừ trách nhiệm, sau đó bạn đã sẵn sàng.</value>
@@ -1777,7 +1777,7 @@ Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và
     <value>Kiểm tra tương thích không thành công</value>
   </data>
   <data name="Condition.Error.Description" xml:space="preserve">
-    <value>fasterLegit không thể xác định mục này có được hỗ trợ trên hệ thống của bạn hay không.</value>
+    <value>VELORA không thể xác định mục này có được hỗ trợ trên hệ thống của bạn hay không.</value>
   </data>
   <data name="Condition.Windows11.Title" xml:space="preserve">
     <value>Yêu cầu Windows 11</value>
@@ -1984,7 +1984,7 @@ Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và
     <value>Không khôi phục được Power Plan trước đó: {0}.</value>
   </data>
   <data name="Revert.PowerPlan.Error.DeleteFailed" xml:space="preserve">
-    <value>Không xóa được Power Plan fasterLegit: {0}</value>
+    <value>Không xóa được Power Plan VELORA: {0}</value>
   </data>
   <data name="Revert.PowerPlan.Error.NothingToDo" xml:space="preserve">
     <value>Không có gì để hoàn tác: chưa ghi nhận Power Plan trước đó hay đã cài đặt.</value>
@@ -2434,7 +2434,7 @@ Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và
     <value>Mở tệp bản ghi</value>
   </data>
   <data name="OptimizationDetailsDialog.Other.OpenRecordFile.Description" xml:space="preserve">
-    <value>Mở thư mục và chọn tệp nơi fasterLegit ghi lại tối ưu này đã làm gì. Tệp vẫn còn sau khi hoàn tác, nên bạn xem lại được.</value>
+    <value>Mở thư mục và chọn tệp nơi VELORA ghi lại tối ưu này đã làm gì. Tệp vẫn còn sau khi hoàn tác, nên bạn xem lại được.</value>
   </data>
   <data name="Optimizer.Details.Provider.Registry" xml:space="preserve">
     <value>Registry</value>
@@ -2511,4 +2511,23 @@ Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và
   <data name="Error.Unhandled.LogHint" xml:space="preserve">
     <value>Chi tiết có trong tệp log.</value>
   </data>
+  <data name="Brand.Name" xml:space="preserve">
+    <value>VELORA</value>
+  </data>
+  <data name="Brand.Tagline" xml:space="preserve">
+    <value>Windows của bạn. Rõ ràng hơn.</value>
+  </data>
+  <data name="Brand.Overview.Title" xml:space="preserve">
+    <value>Hiểu máy tính. Chủ động hơn.</value>
+  </data>
+  <data name="Brand.Overview.Description" xml:space="preserve">
+    <value>Theo dõi phần cứng, xem xét từng thay đổi và chăm sóc hệ thống theo cách của bạn.</value>
+  </data>
+  <data name="Brand.Optimize.Title" xml:space="preserve">
+    <value>Tinh chỉnh hệ thống</value>
+  </data>
+  <data name="Brand.Optimize.Description" xml:space="preserve">
+    <value>Đọc mô tả, kiểm tra rủi ro và chỉ áp dụng thay đổi phù hợp với máy tính của bạn.</value>
+  </data>
+  <data name="Brand.AppDetails" xml:space="preserve"><value>Thông tin gói ứng dụng</value></data>
 </root>
