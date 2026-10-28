@@ -19,7 +19,6 @@ public partial class DashboardViewModel : ViewModel
     private readonly ILogger<DashboardViewModel> _logger;
     private readonly ISnackbarService _snackbarService;
     private readonly SystemInfoService _systemInfoService;
-    private readonly UpdaterService _updaterService;
 
     private readonly DispatcherTimer _updateTimer;
     private bool _ticking;
@@ -29,10 +28,6 @@ public partial class DashboardViewModel : ViewModel
 
     [ObservableProperty]
     private bool _hasSystemInfoLoadFailed;
-    private bool _isUpdateInfoOpen;
-
-    [ObservableProperty]
-    private string? _latestVersion;
 
     [ObservableProperty]
     private StorageInfo _runtimeStorage = StorageInfo.Unknown;
@@ -60,53 +55,27 @@ public partial class DashboardViewModel : ViewModel
 
     [ObservableProperty]
     private string _powerPlanText = Loc.Instance["Common.Unknown"];
-    private bool _updateNotified;
 
     public DashboardViewModel(
         SystemInfoService systemInfoService,
         ISnackbarService snackbarService,
         ILogger<DashboardViewModel> logger,
-        UpdaterService updaterService,
         IContentDialogService contentDialogService
     )
     {
         _systemInfoService = systemInfoService;
         _snackbarService = snackbarService;
         _logger = logger;
-        _updaterService = updaterService;
         _contentDialogService = contentDialogService;
 
         _updateTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2) };
         _updateTimer.Tick += OnUpdateTick;
     }
 
-    public bool IsUpdateInfoOpen
-    {
-        get => _isUpdateInfoOpen;
-        set
-        {
-            if (_isUpdateInfoOpen == value)
-                return;
-
-            _isUpdateInfoOpen = value;
-            OnPropertyChanged();
-
-            if (!_isUpdateInfoOpen && _updateNotified)
-                OpenLatestRelease();
-        }
-    }
-
     protected override async Task InitializeOnceAsync()
     {
         await LoadSystemInfoAsync();
         _systemInfoService.LogSummary();
-        var version = await _updaterService.CheckForUpdatesAsync();
-        if (version is not null)
-        {
-            _updateNotified = true;
-            IsUpdateInfoOpen = true;
-            LatestVersion = version;
-        }
     }
 
     /// <inheritdoc />
@@ -333,31 +302,6 @@ public partial class DashboardViewModel : ViewModel
         return uptime.TotalDays >= 1 ? $"{(int)uptime.TotalDays}d {uptime.Hours}h {uptime.Minutes}m"
             : uptime.TotalHours >= 1 ? $"{(int)uptime.TotalHours}h {uptime.Minutes}m"
             : $"{uptime.Minutes}m {uptime.Seconds}s";
-    }
-
-    private void OpenLatestRelease()
-    {
-        try
-        {
-            Process.Start(
-                new ProcessStartInfo
-                {
-                    FileName = UpdaterService.LatestReleaseUrl,
-                    UseShellExecute = true,
-                }
-            );
-        }
-        catch (Exception ex)
-        {
-            _snackbarService.Show(
-                Loc.Instance["Snackbar.OpenLinkFailed.Title"],
-                Loc.Instance["Snackbar.OpenLinkFailed.Message"],
-                ControlAppearance.Danger,
-                new SymbolIcon { Symbol = SymbolRegular.ErrorCircle24, Filled = true },
-                TimeSpan.FromSeconds(5)
-            );
-            _logger.LogError(ex, "Failed to open latest release page");
-        }
     }
 
     #endregion Helpers
