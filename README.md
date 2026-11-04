@@ -13,6 +13,22 @@ quản lý ứng dụng và lấy lại dung lượng.
 
 </div>
 
+## Nguồn gốc và ghi nhận tác giả
+
+**VELORA lấy ý tưởng và kế thừa mã nguồn từ [optimizerDuck](https://github.com/itsfatduck/optimizerDuck)
+của [fatDuck (`itsfatduck`)](https://github.com/itsfatduck) cùng các tác giả đóng góp,
+theo giấy phép GNU GPL v3.** Đây là một phiên bản phát triển phái sinh;
+nhóm VELORA không tự xây dựng toàn bộ nền tảng từ đầu.
+
+Các chức năng nền như tối ưu Windows, quản lý ứng dụng AppX, quản lý khởi động,
+dọn dẹp ổ đĩa, ghi nhận thao tác và hoàn tác được kế thừa từ nền tảng mã nguồn
+nhóm tiếp nhận. Phần nhóm VELORA cải tiến trong kho này gồm nhận diện/logo,
+bố cục và điều hướng, nội dung giao diện, khả năng truy cập, tài liệu và quy trình
+build/đóng gói cục bộ. Các phần này tiếp tục được phát hành theo GPL v3.
+
+Xem [ghi nhận tác giả và phạm vi đóng góp](ATTRIBUTION.md),
+[giấy phép](LICENSE) và [thông báo thư viện bên thứ ba](THIRD-PARTY-NOTICES.md).
+
 ![Giao diện VELORA](fasterLegit/DesignReview/Dark-1360-DashboardPage.png)
 
 ## Vì sao VELORA?
@@ -77,6 +93,7 @@ Chạy kiểm thử từ terminal quản trị viên trên máy thử nghiệm:
 
 ## Tài liệu
 
+- [Nguồn gốc, tác giả và phạm vi đóng góp](ATTRIBUTION.md)
 - [Kịch bản trình diễn](fasterLegit/DEMO.md)
 - [Quy chuẩn giao diện](DESIGN.md)
 - [Luồng xử lý](fasterLegit/FLOW_VA_CO_CHE_TOI_UU_HOA.md)

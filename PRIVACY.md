@@ -1,6 +1,12 @@
 # Privacy Policy
 
-**Last Updated:** April 5, 2026
+**Last Updated:** November 5, 2026
+
+VELORA derives its ideas and source code from
+[optimizerDuck](https://github.com/itsfatduck/optimizerDuck) by fatDuck
+(`itsfatduck`) and its contributors, under GNU GPL v3. This document describes
+the VELORA derivative; see [ATTRIBUTION.md](ATTRIBUTION.md) for authorship and
+the distinction between inherited work and VELORA modifications.
 
 > [!TIP]
 > **TL;DR: VELORA does not collect, track, or transmit your personal data. Everything runs locally on your machine.**

@@ -3,6 +3,7 @@
 Windows-only WPF desktop app that optimizes Windows. Read this before changing code.
 
 ## Hard rules
+- **Upstream attribution.** VELORA derives its ideas and source code from optimizerDuck by fatDuck (`itsfatduck`), https://github.com/itsfatduck/optimizerDuck, under GPL v3. Preserve original copyright/license notices, link ATTRIBUTION.md from introductory docs, and distinguish inherited Windows functionality from VELORA modifications. Do not describe this derivative as wholly original work.
 - **Windows only.** `fasterLegit` targets `net10.0-windows` with `UseWPF=true` and deliberately **no Windows SDK version in the TFM**: a versioned one makes the SDK reference the CsWinRT projection and ships a 50 MB `Microsoft.Windows.SDK.NET.dll` for WinRT APIs this app never calls. `CA1416` is silent because every path is Windows-only. (`fasterLegit.Test` does carry `10.0.17763.0`.)
 - **Elevated.** `app.manifest` requests `requireAdministrator`. A test that writes the registry, a service or a scheduled task needs an elevated shell too.
 - **Two projects, nothing else.** `fasterLegit/` (the app) and `fasterLegit.Test/`, in `fasterLegit.slnx` (not `.sln`). Never create a top-level directory outside them.

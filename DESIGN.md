@@ -77,6 +77,12 @@ components:
 
 ## Overview
 
+VELORA is an interface and branding adaptation of the optimizerDuck codebase
+by fatDuck (`itsfatduck`) and its contributors, under GNU GPL v3. This document
+records the VELORA visual changes, not a claim of authorship over inherited
+application behavior. See [ATTRIBUTION.md](ATTRIBUTION.md) and
+[optimizerDuck](https://github.com/itsfatduck/optimizerDuck).
+
 **Creative North Star: "The Quiet Control Room"**
 
 VELORA makes local Windows maintenance feel orderly and deliberate. Graphite surfaces, mint emphasis and familiar native controls give real machine information priority. Actions remain close to their scope, with risk and recovery information visible before changes are applied.

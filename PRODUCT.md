@@ -11,6 +11,17 @@ Windows desktop, native WPF.
 A local Windows maintenance workspace: inspect hardware, review optimizations,
 remove unwanted applications, manage startup and reclaim storage.
 
+## Provenance and Contribution Scope
+
+VELORA derives its ideas and source code from optimizerDuck by fatDuck
+(`itsfatduck`) and its contributors: https://github.com/itsfatduck/optimizerDuck.
+The imported source tree uses the technical name fasterLegit. Existing Windows
+operations, AppX/startup/cleanup tools, operation records and supported undo are
+inherited, not original VELORA inventions. VELORA changes in this repository
+cover branding, interface layouts/navigation, copy, accessibility improvements,
+documentation and local build/packaging. See ATTRIBUTION.md for the dated notice
+and detailed boundaries. Preserve GPL v3 and original copyright notices.
+
 ## Users
 
 Windows users maintaining their own computers. The owner is preparing a competition demonstration.
@@ -24,15 +35,20 @@ The application assembly is VELORA and the executable is VELORA.exe. Retain the 
 
 ## Brand Commitments
 
-The owner approved VELORA and delegated visual decisions. Replace the incumbent
-yellow duck identity throughout the user interface and introduction documents.
+The owner approved VELORA and delegated visual decisions. VELORA has its own
+visual identity while its introduction documents explicitly credit optimizerDuck
+and fatDuck as the upstream source.
 The implemented direction is teal on graphite with clear task hierarchy, horizontal workspace navigation and a coordinated light theme.
 Keep light theme and localization working.
 
 ## Evidence on Hand
 
 Implementation and integration tests in fasterLegit/ and fasterLegit.Test/.
-Preserve mandatory upstream copyright, attribution and GPL licensing notices. User-facing identity and introduction documents use VELORA without promotional references to the previous identity.
+Preserve upstream copyright and GPL licensing notices. Introduction documents
+must identify optimizerDuck and fatDuck prominently, distinguish inherited work
+from VELORA changes, and avoid unsupported claims of original authorship or
+unimplemented features. The previous instruction to omit upstream references
+from introduction documents is superseded by this attribution requirement.
 
 ## Product Principles
 

@@ -1,5 +1,9 @@
 # Phát triển VELORA
 
+VELORA kế thừa ý tưởng và mã nguồn của [optimizerDuck](https://github.com/itsfatduck/optimizerDuck)
+do fatDuck (`itsfatduck`) và cộng đồng phát triển, theo GPL v3. Đọc
+[ATTRIBUTION.md](ATTRIBUTION.md) để phân biệt phần nền kế thừa và phần cải tiến.
+
 Windows, .NET 10 SDK, WPF và WPF-UI. Đọc AGENTS.md trước khi sửa mã.
 Dùng `fasterLegit/build.ps1` để giữ SDK, package, cache và tệp tạm trong dự án.
 
@@ -12,6 +16,9 @@ Dùng `fasterLegit/build.ps1` để giữ SDK, package, cache và tệp tạm tr
 - Giữ điều hướng bàn phím, trạng thái tải, trống và lỗi.
 - Giữ khóa dữ liệu và định danh thao tác ổn định khi đổi thương hiệu.
 - Giữ giấy phép và thông báo bản quyền bắt buộc.
+- Ghi rõ phần kế thừa và phần thay đổi; bổ sung thông báo sửa đổi và ngày tương
+  ứng khi cần. Không ghi nhận tính năng sẵn có của optimizerDuck là sáng tạo mới
+  của nhóm VELORA.
 
 ## Xác minh
 

@@ -1,18 +1,25 @@
 # Flow và cơ chế tối ưu của VELORA
 
-Tài liệu này mô tả code đang có trong working tree hiện tại, không mô tả các tính năng chỉ còn
-resource dịch hoặc đã bị xóa khỏi source. Mục tiêu là trả lời hai câu hỏi:
+VELORA kế thừa ý tưởng và mã nguồn của [optimizerDuck](https://github.com/itsfatduck/optimizerDuck)
+do fatDuck (`itsfatduck`) và các tác giả đóng góp phát triển. Các cơ chế xử lý
+Windows mô tả dưới đây thuộc nền tảng kế thừa, không phải tuyên bố nhóm VELORA
+sáng tạo từ đầu. Xem [ghi nhận tác giả](../ATTRIBUTION.md) và [GPL v3](../LICENSE).
+
+Tài liệu này giữ lại mô tả kiến trúc và ví dụ xử lý từ nền tảng mã nguồn kế thừa.
+Một số nhóm hoặc tệp được nhắc đến đã bị loại khỏi cây mã hiện tại; không dùng
+chúng để khẳng định tính năng hiện có hoặc phần sáng tạo của nhóm VELORA.
+Danh sách tính năng bản hiện tại được giới thiệu trong [README](../README.md).
+Mục tiêu của phần tham khảo là trả lời hai câu hỏi:
 
 1. Khi người dùng bật hoặc tắt một mục trong trang **Optimize**, lệnh đi qua những lớp nào?
 2. Vì sao ứng dụng có thể thay đổi cài đặt Windows, và mỗi mục tối ưu thực sự ghi gì vào máy?
 
-> Phạm vi hiện tại: bản Release có 4 nhóm, 9 mục tối ưu. Cả 9 mục đều thay đổi Windows Registry.
-> Nhóm `Debug` chỉ tồn tại trong bản Debug, dùng để thử flow thành công/thất bại/retry và không
-> thay đổi máy.
+> Phạm vi mô tả kế thừa: 4 nhóm, 9 mục tối ưu Registry cùng ví dụ `Debug`.
+> Đây không phải số lượng chức năng được xác nhận cho bản VELORA hiện tại.
 
 ## 1. Bức tranh tổng thể
 
-fasterLegit là ứng dụng WPF chỉ chạy trên Windows. Phần Optimize không gọi một script tổng hợp
+VELORA (giữ namespace kỹ thuật fasterLegit) là ứng dụng WPF chỉ chạy trên Windows. Phần Optimize không gọi một script tổng hợp
 và cũng không có nhiều engine độc lập. Mọi lần thay đổi hệ thống đều đi qua một đường chạy chung:
 
 ```text
@@ -349,7 +356,8 @@ thái mới.
 
 ### 6.1 Performance
 
-Source: [`Domain/Optimizations/Categories/Performance.cs`](Domain/Optimizations/Categories/Performance.cs)
+Đường dẫn tham khảo trong tài liệu nền: `Domain/Optimizations/Categories/Performance.cs`
+(tệp không còn trong cây mã hiện tại).
 
 #### DisableAccessibilityKeyboardHotkeys
 
@@ -415,7 +423,8 @@ thực tế phụ thuộc phiên bản Windows còn đọc các key này.
 
 ### 6.3 Bloatware and Services
 
-Source: [`Domain/Optimizations/Categories/BloatwareAndServices.cs`](Domain/Optimizations/Categories/BloatwareAndServices.cs)
+Đường dẫn tham khảo trong tài liệu nền: `Domain/Optimizations/Categories/BloatwareAndServices.cs`
+(tệp không còn trong cây mã hiện tại).
 
 #### DisablePreinstalledApps
 
@@ -510,7 +519,7 @@ Microsoft 365 hay Copilot khỏi máy.
 
 ## 7. Debug optimizations
 
-[`Domain/Optimizations/Categories/Debug.cs`](Domain/Optimizations/Categories/Debug.cs) nằm trong
+`Domain/Optimizations/Categories/Debug.cs` (đường dẫn tham khảo, tệp không còn trong cây mã hiện tại) nằm trong
 `#if DEBUG`, nên không được compile vào Release. Các item này mô phỏng:
 
 - một step lỗi rồi retry thành công;

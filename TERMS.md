@@ -1,6 +1,13 @@
 # Terms of Service
 
-**Last Updated:** April 5, 2026
+**Last Updated:** November 5, 2026
+
+VELORA is a modified version derived from the ideas and source code of
+[optimizerDuck](https://github.com/itsfatduck/optimizerDuck) by fatDuck
+(`itsfatduck`) and its contributors. Original copyright notices and GNU GPL v3
+are retained. The VELORA contributors are responsible for their modifications;
+see [ATTRIBUTION.md](ATTRIBUTION.md). These terms do not override or restrict
+rights granted by the [GPL license](LICENSE).
 
 ## 1. Acceptance of Terms
 

@@ -1,16 +1,23 @@
-<div align="center">
-  <img src="./.github/assets/fasterLegit.png" alt="fasterLegit Banner" title="fasterLegit" width="600"/>
-</div>
+# Upstream and Third-Party Software Notices
 
-# Third-Party Software Notices
+Updated 2026-11-05 for the VELORA derivative.
 
-**fasterLegit** is built upon the shoulders of the amazing open-source community. To deliver the best experience, I rely on several third-party libraries and resources. Please note that while these components are integrated into the software, they remain the property of their respective owners and are governed by their own specific licenses.
+## Original application
 
-> [!TIP]
-> **Help me stay transparent!**
-> If you notice a missing attribution or an incorrect license credit, please let me know. I'll fix it as soon as possible.
->
-> 📬 **Get in touch:** Open an [Issue](https://github.com/itsfatduck/fasterLegit/issues) or reach me at: [itsfatduck@gmail.com](mailto:itsfatduck@gmail.com)
+VELORA derives its ideas and source code from
+[optimizerDuck](https://github.com/itsfatduck/optimizerDuck), developed by
+[fatDuck (`itsfatduck`)](https://github.com/itsfatduck) and its contributors.
+The imported tree uses the technical name `fasterLegit`.
+
+**Copyright (C) 2025–2026 fatDuck (itsfatduck).** The upstream application and
+this derivative are provided under GNU GPL v3; see [LICENSE](LICENSE).
+**Copyright (C) 2026 VELORA contributors** applies only to their modifications.
+See [ATTRIBUTION.md](ATTRIBUTION.md) for contribution boundaries and source links.
+
+The dependency notices below are retained from the inherited source tree.
+Each dependency remains governed by its own license. Listing a dependency here
+does not imply that the VELORA team authored it or that every listed component
+is included in every release artifact.
 
 ---
 

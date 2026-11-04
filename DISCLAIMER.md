@@ -1,6 +1,12 @@
 # Disclaimer
 
-**Last Updated:** April 5, 2026
+**Last Updated:** November 5, 2026
+
+VELORA derives its ideas and source code from
+[optimizerDuck](https://github.com/itsfatduck/optimizerDuck) by fatDuck
+(`itsfatduck`) and its contributors, under GNU GPL v3. The VELORA team is
+responsible for its own modifications; the original author must not be assumed
+to endorse this derivative. See [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## General Disclaimer
 
