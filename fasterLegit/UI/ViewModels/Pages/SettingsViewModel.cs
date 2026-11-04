@@ -19,9 +19,13 @@ public partial class SettingsViewModel(
     ConfigManager configManager,
     IOptionsMonitor<AppSettings> appOptionsMonitor,
     ISnackbarService snackbarService,
-    ILogger<SettingsViewModel> logger
+    ILogger<SettingsViewModel> logger,
+    INavigationService navigation
 ) : ViewModel
 {
+    [RelayCommand]
+    private void OpenAdvisor() => navigation.Navigate(typeof(fasterLegit.UI.Pages.AdvisorPage));
+
     [ObservableProperty]
     private ApplicationTheme _currentApplicationTheme = ApplicationTheme.Unknown;
 

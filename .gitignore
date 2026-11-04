@@ -701,6 +701,8 @@ $RECYCLE.BIN/
 # Local agent/session artifacts
 **/.tools/
 **/.build-cache/
+**/UserData/
+**/.ollama/
 fasterLegit/DesignReview/*
 !fasterLegit/DesignReview/Dark-1360-DashboardPage.png
 !fasterLegit/DesignReview/Light-1360-DashboardPage.png

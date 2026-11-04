@@ -233,7 +233,10 @@ public class BloatwareService(
     /// <summary>
     ///     Removes an AppX package from the system.
     /// </summary>
-    public async Task<AppXRemovalResult> RemoveAppXPackage(AppXPackage appXPackage)
+    public async Task<AppXRemovalResult> RemoveAppXPackage(
+        AppXPackage appXPackage,
+        bool? removeProvisioned = null
+    )
     {
         try
         {
@@ -288,7 +291,7 @@ public class BloatwareService(
 
                 """;
 
-            if (appOptionsMonitor.CurrentValue.Bloatware.RemoveProvisioned)
+            if (removeProvisioned ?? appOptionsMonitor.CurrentValue.Bloatware.RemoveProvisioned)
                 script += """
                     Write-Output "Searching provisioned package..."
 

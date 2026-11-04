@@ -33,15 +33,19 @@ trùng hoàn toàn với một commit hoặc bản phát hành cụ thể của 
 | Nội dung giao diện, nhãn truy cập cho các điều khiển đã sửa và kiểm thử liên quan | Phần cải tiến trong kho VELORA; cơ chế bản địa hóa và kiểm thử nền được kế thừa |
 | Tài liệu VELORA, kịch bản demo, cấu hình build/cache cục bộ và nhận diện bản đóng gói | Phần cải tiến trong kho VELORA |
 
-Các ý tưởng phát triển tiếp, bao gồm AI Advisor, không được xem là tính năng
-đã triển khai hoặc đóng góp đã chứng minh chỉ vì được nêu trong bản thuyết minh.
-Khi bổ sung chức năng, cần cập nhật bảng này dựa trên mã nguồn và kiểm thử thực tế.
+Phần bổ sung của **HIT Anyone'sLegend** gồm AI Advisor ba chế độ, bộ thu thập
+bằng chứng chỉ đọc, truy xuất hướng dẫn theo từ khóa, tích hợp Ollama/API tương
+thích OpenAI, kiểm tra đầu ra và kế hoạch có xác nhận, đo lại và báo cáo JSON.
+Nhóm sử dụng LLM có sẵn, không tự huấn luyện model. Các thao tác Windows của
+kế hoạch AI tiếp tục gọi dịch vụ kế thừa qua OperationRunner, không được ghi
+nhận thành nền tảng xử lý hệ thống mới do nhóm xây dựng. Kiểm tra local thực
+tế dùng qwen3:4b; API được kiểm thử giao thức, cần xác minh với provider thực.
 
 ## Quyền tác giả và giấy phép
 
 - Mã nguồn gốc: **Copyright (C) 2025–2026 fatDuck (itsfatduck)**;
   giữ nguyên các thông báo khác của những tác giả và thư viện liên quan.
-- Phần sửa đổi riêng trong kho VELORA: **Copyright (C) 2026 VELORA contributors**.
+- Phần sửa đổi riêng trong kho VELORA: **Copyright (C) 2026 HIT Anyone'sLegend (VELORA contributors)**.
   Ghi nhận này chỉ áp dụng cho đóng góp riêng, không chuyển quyền sở hữu mã gốc.
 - Bản sửa đổi tiếp tục được cung cấp theo GNU GPL v3; không bổ sung điều kiện
   tước bỏ các quyền mà giấy phép cấp cho người nhận.

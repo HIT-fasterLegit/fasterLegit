@@ -24,6 +24,14 @@ VELORA is a **completely free and open-source** project licensed under the [GNU 
 
 There are currently no paid features.
 
+Optional AI API use requires a user-provided provider account and key. The provider
+may charge usage fees and apply its own data policies. Local Ollama models are
+downloaded separately and carry their own licenses. HIT Anyone'sLegend supplies
+the VELORA AI integration; it does not own or train these models. AI output can
+misinterpret observations and is not a guarantee of diagnosis, removal safety,
+recoverability or improved performance. See [AI guide](fasterLegit/Docs/AI_ADVISOR.md)
+and [privacy policy](PRIVACY.md) before using a remote endpoint.
+
 ## 3. Safety & Security
 
 To the best of our knowledge, the Application:

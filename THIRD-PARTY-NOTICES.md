@@ -481,3 +481,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+
+## Optional local AI downloads
+
+- Ollama: https://github.com/ollama/ollama, MIT license. The optional local-ai.ps1
+  helper downloads a pinned Windows portable runtime and verifies its SHA-256.
+- Qwen3-4B: https://huggingface.co/Qwen/Qwen3-4B, Apache License 2.0. The default
+  qwen3:4b model is downloaded separately through Ollama, not bundled in Git or
+  the VELORA executable. Other chosen models carry their own license terms.
+- Cloud API models and endpoints are configured by the user and subject to their
+  providers' terms. No provider endorsement or ownership of model weights is implied.

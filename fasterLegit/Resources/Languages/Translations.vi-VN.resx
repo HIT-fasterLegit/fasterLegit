@@ -2530,4 +2530,99 @@ Cập nhật ngay để trải nghiệm các tính năng mới, cải tiến và
     <value>Đọc mô tả, kiểm tra rủi ro và chỉ áp dụng thay đổi phù hợp với máy tính của bạn.</value>
   </data>
   <data name="Brand.AppDetails" xml:space="preserve"><value>Thông tin gói ứng dụng</value></data>
+  <data name="AI.Navigation" xml:space="preserve"><value>VELORA AI</value></data>
+  <data name="AI.Title" xml:space="preserve"><value>Hiểu máy tính cùng VELORA AI</value></data>
+  <data name="AI.Description" xml:space="preserve"><value>Mô tả vấn đề, xem căn cứ từ máy tính và chủ động chọn cách xử lý.</value></data>
+  <data name="AI.Settings.Title" xml:space="preserve"><value>Thiết lập AI</value></data>
+  <data name="AI.Settings.Description" xml:space="preserve"><value>Chọn Ollama cục bộ hoặc API tương thích, cấu hình model và khóa riêng.</value></data>
+  <data name="AI.Settings.Provider" xml:space="preserve"><value>Cách chạy AI</value></data>
+  <data name="AI.Settings.Local" xml:space="preserve"><value>Model cục bộ · Ollama</value></data>
+  <data name="AI.Settings.Api" xml:space="preserve"><value>API tương thích</value></data>
+  <data name="AI.Settings.Sample" xml:space="preserve"><value>Thời gian quan sát (5–60 giây)</value></data>
+  <data name="AI.Settings.LocalEndpoint" xml:space="preserve"><value>Địa chỉ Ollama cục bộ</value></data>
+  <data name="AI.Settings.LocalModel" xml:space="preserve"><value>Tên model cục bộ</value></data>
+  <data name="AI.Settings.ApiEndpoint" xml:space="preserve"><value>Địa chỉ gốc API (gồm /v1 nếu cần)</value></data>
+  <data name="AI.Settings.ApiModel" xml:space="preserve"><value>Tên model API</value></data>
+  <data name="AI.Settings.Key" xml:space="preserve"><value>Khóa API mới (để trống để giữ khóa đã lưu)</value></data>
+  <data name="AI.Settings.KeyHint" xml:space="preserve"><value>Khóa được mã hóa cho tài khoản Windows này, lưu riêng cấu hình và loại khỏi Git.</value></data>
+  <data name="AI.Settings.Save" xml:space="preserve"><value>Lưu cấu hình</value></data>
+  <data name="AI.Settings.Test" xml:space="preserve"><value>Kiểm tra kết nối đã lưu</value></data>
+  <data name="AI.Settings.ClearKey" xml:space="preserve"><value>Xóa khóa đã lưu</value></data>
+  <data name="AI.Settings.LocalHint" xml:space="preserve"><value>Để chạy cục bộ, khởi động Ollama và tải model đã chọn. Dùng local-ai.ps1 để lưu runtime/model cạnh dự án. Cấu hình, khóa và báo cáo AI được lưu trong UserData/Advisor cạnh file EXE.</value></data>
+  <data name="AI.Settings.Saved" xml:space="preserve"><value>Đã lưu cấu hình. Cần xác nhận lại việc gửi dữ liệu trước khi dùng API.</value></data>
+  <data name="AI.Settings.KeyCleared" xml:space="preserve"><value>Đã xóa khóa API đã lưu.</value></data>
+  <data name="AI.Settings.Connected" xml:space="preserve"><value>Đã kết nối model {0}.</value></data>
+  <data name="AI.Mode.Title" xml:space="preserve"><value>Anh cần hỗ trợ việc gì?</value></data>
+  <data name="AI.Mode.Diagnose" xml:space="preserve"><value>Chẩn đoán theo triệu chứng</value></data>
+  <data name="AI.Mode.Applications" xml:space="preserve"><value>Tư vấn gỡ ứng dụng</value></data>
+  <data name="AI.Mode.Maintenance" xml:space="preserve"><value>Lập kế hoạch bảo trì</value></data>
+  <data name="AI.Question" xml:space="preserve"><value>Mô tả vấn đề hoặc ứng dụng</value></data>
+  <data name="AI.Question.Hint" xml:space="preserve"><value>Ví dụ: máy giật khi mở trình duyệt cùng VS Code.</value></data>
+  <data name="AI.Goal" xml:space="preserve"><value>Nhu cầu và những gì muốn giữ</value></data>
+  <data name="AI.Goal.Hint" xml:space="preserve"><value>Ví dụ: học lập trình, họp trực tuyến; giữ ứng dụng ghi chú và đồng bộ.</value></data>
+  <data name="AI.Consent" xml:space="preserve"><value>Cho phép gửi câu hỏi, số liệu đo, tên tiến trình/ứng dụng được chọn và thông tin khởi động đến API đã cấu hình cho yêu cầu này.</value></data>
+  <data name="AI.Analyze" xml:space="preserve"><value>Phân tích</value></data>
+  <data name="AI.ClearConversation" xml:space="preserve"><value>Cuộc trao đổi mới</value></data>
+  <data name="AI.PrivacyHint" xml:space="preserve"><value>Chế độ cục bộ gọi Ollama trên máy. API cần sự đồng ý. Không thu thập nội dung tài liệu, tên tài khoản hay đường dẫn tệp đầy đủ. Chỉ lưu báo cáo khi chọn Lưu báo cáo.</value></data>
+  <data name="AI.Empty.Title" xml:space="preserve"><value>Bắt đầu từ điều anh đang gặp.</value></data>
+  <data name="AI.Empty.Description" xml:space="preserve"><value>AI có thể hỏi thêm, chọn phép kiểm tra chỉ đọc và giải thích số liệu. Một chỉ số cao chưa chứng minh nguyên nhân. Hãy cấu hình model phía trên trước lần dùng đầu.</value></data>
+  <data name="AI.Evidence.Title" xml:space="preserve"><value>Xem căn cứ và nguồn tham khảo</value></data>
+  <data name="AI.Actions.Title" xml:space="preserve"><value>Xem xét kế hoạch đề xuất</value></data>
+  <data name="AI.Actions.Hint" xml:space="preserve"><value>Không tự chọn thao tác. Đọc ảnh hưởng của từng mục; mục xem xét sẽ mở công cụ hiện có. Thay đổi cần xác nhận thêm một lần.</value></data>
+  <data name="AI.Actions.Execute" xml:space="preserve"><value>Xem và xác nhận mục đã chọn</value></data>
+  <data name="AI.Recheck" xml:space="preserve"><value>Đo kiểm tra lại</value></data>
+  <data name="AI.SaveReport" xml:space="preserve"><value>Lưu báo cáo</value></data>
+  <data name="AI.Confirm.Title" xml:space="preserve"><value>Xác nhận kế hoạch đã chọn</value></data>
+  <data name="AI.Confirm.Body" xml:space="preserve"><value>Chỉ các mục liệt kê sẽ chạy. Gỡ ứng dụng và dọn tệp có thể làm mất dữ liệu vĩnh viễn. Thao tác AI không lưu hoàn tác tự động; mục khởi động đã tắt có thể bật lại thủ công trong Quản lý khởi động. Sao lưu dữ liệu quan trọng trước khi tiếp tục.</value></data>
+  <data name="AI.Confirm.Apply" xml:space="preserve"><value>Xác nhận và thực hiện</value></data>
+  <data name="AI.Progress.Plan" xml:space="preserve"><value>Đang chọn phép kiểm tra chỉ đọc…</value></data>
+  <data name="AI.Progress.Explain" xml:space="preserve"><value>Đang diễn giải số liệu và lập kế hoạch…</value></data>
+  <data name="AI.Progress.Execute" xml:space="preserve"><value>Đang thực hiện kế hoạch đã xác nhận…</value></data>
+  <data name="AI.Progress.Recheck" xml:space="preserve"><value>Đang đo lại. Hãy giữ điều kiện sử dụng tương đương.</value></data>
+  <data name="AI.Tool.measure_resources" xml:space="preserve"><value>Đang quan sát CPU, bộ nhớ và tiến trình…</value></data>
+  <data name="AI.Tool.inspect_storage" xml:space="preserve"><value>Đang đọc dung lượng ổ đĩa…</value></data>
+  <data name="AI.Tool.inspect_startup" xml:space="preserve"><value>Đang kiểm tra mục khởi động…</value></data>
+  <data name="AI.Tool.inspect_apps" xml:space="preserve"><value>Đang kiểm tra ứng dụng AppX có thể gỡ và manifest đọc được…</value></data>
+  <data name="AI.Status.Cancelled" xml:space="preserve"><value>Đã hủy yêu cầu. Thay đổi đã hoàn tất, nếu có, vẫn được ghi nhận.</value></data>
+  <data name="AI.Status.Done" xml:space="preserve"><value>Model: {0} · số phép kiểm tra chỉ đọc: {1}</value></data>
+  <data name="AI.Status.Rechecked" xml:space="preserve"><value>Đã có đối chiếu. Kết quả có thể thay đổi khi điều kiện sử dụng khác nhau.</value></data>
+  <data name="AI.Status.SavedReport" xml:space="preserve"><value>Đã lưu báo cáo tại đường dẫn bên dưới.</value></data>
+  <data name="AI.Comparison" xml:space="preserve"><value>CPU trung bình: {0} → {1}; RAM trung bình: {2} → {3}. Thời gian quan sát: {4}s / {5}s. Đối chiếu này không chứng minh quan hệ nhân quả hay mức tăng tốc bảo đảm.</value></data>
+  <data name="AI.Evidence.System" xml:space="preserve"><value>Cấu hình máy</value></data>
+  <data name="AI.Evidence.Resources" xml:space="preserve"><value>Tài nguyên đã quan sát</value></data>
+  <data name="AI.Evidence.Storage" xml:space="preserve"><value>Dung lượng ổ đĩa</value></data>
+  <data name="AI.Evidence.Startup" xml:space="preserve"><value>Danh sách khởi động</value></data>
+  <data name="AI.Evidence.AppScope" xml:space="preserve"><value>Phạm vi kiểm tra ứng dụng</value></data>
+  <data name="AI.Action.Cleanup" xml:space="preserve"><value>Dọn nhóm tệp tạm: {0}</value></data>
+  <data name="AI.Action.Cleanup.Detail" xml:space="preserve"><value>Xem lại trước khi xác nhận. Dùng bộ dọn tệp tạm hiện có; xóa không thể hoàn tác và một số tệp có thể bị bỏ qua.</value></data>
+  <data name="AI.Action.Startup" xml:space="preserve"><value>Tắt khởi động: {0}</value></data>
+  <data name="AI.Action.Startup.Detail" xml:space="preserve"><value>Đổi mục khởi động được hỗ trợ của tài khoản hiện tại; không đóng ứng dụng đang chạy. Không lưu hoàn tác tự động; có thể bật lại thủ công trong Quản lý khởi động.</value></data>
+  <data name="AI.Action.Remove" xml:space="preserve"><value>Gỡ ứng dụng: {0}</value></data>
+  <data name="AI.Action.Remove.Detail" xml:space="preserve"><value>Gỡ AppX cho tài khoản hiện tại, không xóa bản provisioned cho tài khoản mới. Có thể mất dữ liệu ứng dụng; cần sao lưu. Không bảo đảm cài lại hay khôi phục dữ liệu.</value></data>
+  <data name="AI.Action.ReviewStartup" xml:space="preserve"><value>Mở Quản lý khởi động</value></data>
+  <data name="AI.Action.ReviewApps" xml:space="preserve"><value>Mở Thư viện ứng dụng</value></data>
+  <data name="AI.Action.ReviewCleanup" xml:space="preserve"><value>Mở Dọn dẹp ổ đĩa</value></data>
+  <data name="AI.Action.ReviewOptimizations" xml:space="preserve"><value>Xem các mục tinh chỉnh hệ thống</value></data>
+  <data name="AI.Action.Review.Detail" xml:space="preserve"><value>Mở công cụ hiện có để anh xem xét; thao tác điều hướng này không thay đổi hệ thống.</value></data>
+  <data name="AI.Execution.Opened" xml:space="preserve"><value>Đã mở công cụ để xem xét.</value></data>
+  <data name="AI.Execution.Nothing" xml:space="preserve"><value>Không ghi nhận thay đổi: mục trống, tệp bị khóa hoặc Windows từ chối thao tác.</value></data>
+  <data name="AI.Execution.Freed" xml:space="preserve"><value>Đã xóa {0} byte. Không thể hoàn tác việc xóa tệp.</value></data>
+  <data name="AI.Execution.Completed" xml:space="preserve"><value>Hoàn tất thành công: {0}/{1}. Xem kết quả từng mục và lịch sử thao tác.</value></data>
+  <data name="AI.Error.Settings" xml:space="preserve"><value>Chọn cách chạy AI hợp lệ và thời gian quan sát từ 5 đến 60 giây.</value></data>
+  <data name="AI.Error.Model" xml:space="preserve"><value>Nhập đúng tên model rồi lưu cấu hình.</value></data>
+  <data name="AI.Error.Endpoint" xml:space="preserve"><value>Nhập địa chỉ gốc API hợp lệ. Cần HTTPS trừ địa chỉ trên máy; không đặt khóa hoặc tham số truy vấn trong URL.</value></data>
+  <data name="AI.Error.LocalOnly" xml:space="preserve"><value>Chế độ cục bộ chỉ chấp nhận máy chủ trên máy và model cục bộ, không dùng model :cloud.</value></data>
+  <data name="AI.Error.Key" xml:space="preserve"><value>Lưu khóa API trước khi kết nối API.</value></data>
+  <data name="AI.Error.Http" xml:space="preserve"><value>Máy chủ model từ chối yêu cầu. Kiểm tra endpoint, model, khóa đã lưu và khả năng tương thích API.</value></data>
+  <data name="AI.Error.Response" xml:space="preserve"><value>Model trả về báo cáo không hợp lệ hoặc mã căn cứ/thao tác không được hỗ trợ. Chưa thực hiện thay đổi đề xuất. Thử lại hoặc chọn model phù hợp hơn.</value></data>
+  <data name="AI.Error.Tool" xml:space="preserve"><value>Model yêu cầu phép kiểm tra không được hỗ trợ. Chỉ cho phép các phép kiểm tra chỉ đọc đã định nghĩa.</value></data>
+  <data name="AI.Error.Question" xml:space="preserve"><value>Nhập câu hỏi tối đa 4.000 ký tự và mục tiêu tối đa 2.000 ký tự.</value></data>
+  <data name="AI.Error.Consent" xml:space="preserve"><value>Cần đồng ý gửi dữ liệu trước khi dùng API đã cấu hình, hoặc chuyển sang chế độ cục bộ.</value></data>
+  <data name="AI.Error.Measurement" xml:space="preserve"><value>Chưa đọc được số liệu tài nguyên. Thử lại khi hệ thống ổn định.</value></data>
+  <data name="AI.Error.Action" xml:space="preserve"><value>Thao tác đã chọn không thuộc kế hoạch được kiểm tra. Hãy phân tích lại.</value></data>
+  <data name="AI.Error.StaleAction" xml:space="preserve"><value>Kế hoạch đã cũ hoặc đối tượng đã thay đổi. Phân tích lại trước khi thực hiện.</value></data>
+  <data name="AI.Error.Verify" xml:space="preserve"><value>Windows chưa xác nhận kết quả yêu cầu. Kiểm tra đối tượng trong công cụ hiện có.</value></data>
+  <data name="AI.Error.General" xml:space="preserve"><value>Chưa hoàn tất yêu cầu AI. Kiểm tra cấu hình đã lưu, model/máy chủ cục bộ hoặc kết nối mạng. Khóa API không được đưa vào chi tiết lỗi.</value></data>
+  <data name="AI.Error.Unsaved" xml:space="preserve"><value>Lưu thiết lập AI đã thay đổi trước khi gửi yêu cầu.</value></data>
+  <data name="AI.Report.Limits" xml:space="preserve"><value>AI có thể diễn giải sai căn cứ. Phép kiểm tra này không đo nhiệt độ, tải GPU, độ chai pin hay chẩn đoán lỗi phần cứng. Hãy kiểm tra số liệu được dẫn trước khi thao tác.</value></data>
 </root>

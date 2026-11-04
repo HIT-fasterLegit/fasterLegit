@@ -44,6 +44,11 @@
             TitleBar="{Binding ElementName=TitleBar, Mode=OneWay}">
             <ui:NavigationView.MenuItems>
                 <controls:FilledNavigationViewItem
+                    Content="{extensions:Loc AI.Navigation}"
+                    Cursor="Hand"
+                    Icon="{ui:SymbolIcon Bot24}"
+                    TargetPageType="{x:Type pages:AdvisorPage}" />
+                <controls:FilledNavigationViewItem
                     Content="{extensions:Loc Sidebar.Dashboard}"
                     Cursor="Hand"
                     Icon="{ui:SymbolIcon Home24}"

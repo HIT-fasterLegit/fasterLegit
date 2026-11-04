@@ -19,7 +19,9 @@ The imported source tree uses the technical name fasterLegit. Existing Windows
 operations, AppX/startup/cleanup tools, operation records and supported undo are
 inherited, not original VELORA inventions. VELORA changes in this repository
 cover branding, interface layouts/navigation, copy, accessibility improvements,
-documentation and local build/packaging. See ATTRIBUTION.md for the dated notice
+documentation and local build/packaging. HIT Anyone'sLegend adds evidence-based
+AI diagnostics, AppX advice, confirmed maintenance plans, Ollama/OpenAI-compatible
+provider settings, remeasurement and JSON reports. Windows execution remains inherited. See ATTRIBUTION.md for the dated notice
 and detailed boundaries. Preserve GPL v3 and original copyright notices.
 
 ## Users

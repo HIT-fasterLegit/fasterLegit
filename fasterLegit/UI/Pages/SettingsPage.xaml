@@ -33,6 +33,12 @@
             </Border>
             <StackPanel Grid.Column="1">
             <ui:TextBlock Style="{StaticResource PageTitleStyle}" Text="{ext:Loc Settings.Header.Title}" />
+            <ui:CardAction Margin="0,20,0,0" Command="{Binding ViewModel.OpenAdvisorCommand}" Icon="{ui:SymbolIcon Bot24}">
+                <StackPanel>
+                    <ui:TextBlock FontWeight="SemiBold" Text="{ext:Loc AI.Settings.Title}" />
+                    <ui:TextBlock Style="{StaticResource CaptionTextStyle}" Text="{ext:Loc AI.Settings.Description}" />
+                </StackPanel>
+            </ui:CardAction>
 
             <StackPanel Style="{StaticResource SettingsSectionStyle}">
                 <ui:TextBlock Style="{StaticResource SectionHeaderStyle}" Text="{ext:Loc Settings.Appearance.Header}" />

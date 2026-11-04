@@ -1,6 +1,9 @@
+using System.Net.Http;
 using fasterLegit.Common.Helpers;
 using fasterLegit.Domain.Abstractions;
+using fasterLegit.Domain.Advisor;
 using fasterLegit.Domain.Configuration;
+using fasterLegit.Services.Advisor;
 using fasterLegit.Services.Configuration;
 using fasterLegit.Services.Optimization;
 using fasterLegit.Services.Revert;
@@ -63,6 +66,20 @@ public static class ApplicationServiceCollectionExtensions
         services.AddSingleton<OptimizePage>();
         services.AddSingleton<SettingsViewModel>();
         services.AddSingleton<SettingsPage>();
+        services.AddSingleton<AdvisorViewModel>();
+        services.AddSingleton<AdvisorPage>();
+        services.AddSingleton<AdvisorSettingsStore>();
+        services.AddSingleton(
+            new HttpClient(new HttpClientHandler { AllowAutoRedirect = false })
+            {
+                Timeout = TimeSpan.FromMinutes(4),
+            }
+        );
+        services.AddSingleton<IAdvisorModelClient, AdvisorModelClient>();
+        services.AddSingleton<IAdvisorEvidenceCollector, AdvisorEvidenceCollector>();
+        services.AddSingleton<AdvisorService>();
+        services.AddSingleton<AdvisorActionExecutor>();
+        services.AddSingleton<AdvisorReportStore>();
         services.AddSingleton<BloatwareViewModel>();
         services.AddSingleton<BloatwarePage>();
         services.AddSingleton<DiskCleanupViewModel>();

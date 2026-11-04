@@ -6,8 +6,8 @@
 
 **Windows của bạn. Rõ ràng hơn.**
 
-Không gian chăm sóc Windows: hiểu hệ thống, tinh chỉnh có chủ đích,
-quản lý ứng dụng và lấy lại dung lượng.
+Không gian chăm sóc Windows của **HIT Anyone'sLegend**: chẩn đoán có dẫn chứng
+bằng AI, xem xét ứng dụng và lập kế hoạch bảo trì do người dùng kiểm soát.
 
 [Tính năng](#tính-năng) · [Chạy dự án](#chạy-dự-án) · [Kịch bản demo](fasterLegit/DEMO.md)
 
@@ -24,7 +24,9 @@ Các chức năng nền như tối ưu Windows, quản lý ứng dụng AppX, qu
 dọn dẹp ổ đĩa, ghi nhận thao tác và hoàn tác được kế thừa từ nền tảng mã nguồn
 nhóm tiếp nhận. Phần nhóm VELORA cải tiến trong kho này gồm nhận diện/logo,
 bố cục và điều hướng, nội dung giao diện, khả năng truy cập, tài liệu và quy trình
-build/đóng gói cục bộ. Các phần này tiếp tục được phát hành theo GPL v3.
+build/đóng gói cục bộ. Nhóm bổ sung AI Advisor: thu thập bằng chứng chỉ đọc,
+tích hợp Ollama/API, lập kế hoạch có xác nhận và đo lại kết quả. Các phần sửa đổi
+tiếp tục được phát hành theo GPL v3.
 
 Xem [ghi nhận tác giả và phạm vi đóng góp](ATTRIBUTION.md),
 [giấy phép](LICENSE) và [thông báo thư viện bên thứ ba](THIRD-PARTY-NOTICES.md).
@@ -42,6 +44,7 @@ ghi lại kết quả và lưu dữ liệu hoàn tác cho thay đổi có hỗ t
 
 | Không gian | Công việc |
 | --- | --- |
+| **VELORA AI** | Chẩn đoán triệu chứng từ số liệu thực, tư vấn AppX và lập kế hoạch bảo trì; hỗ trợ Ollama cục bộ hoặc API tương thích OpenAI |
 | **Tổng quan** | Xem CPU, RAM, GPU, ổ đĩa, Windows, firmware, bảo mật và thời gian hoạt động |
 | **Tinh chỉnh** | Xem xét các thay đổi trải nghiệm Windows và quyền riêng tư |
 | **Thư viện ứng dụng** | Kiểm tra ứng dụng AppX đã cài và chọn ứng dụng muốn gỡ |
@@ -50,6 +53,57 @@ ghi lại kết quả và lưu dữ liệu hoàn tác cho thay đổi có hỗ t
 
 Giao diện tiếng Việt, hai chế độ sáng/tối, tìm kiếm, lọc và trạng thái tải,
 trống, lỗi. Logo chữ V cùng bảng màu xanh ngọc tạo nhận diện xuyên suốt.
+
+## VELORA AI
+
+Ba chế độ: **Chẩn đoán**, **Tư vấn ứng dụng**, **Kế hoạch bảo trì**. AI chọn các
+phép kiểm tra chỉ đọc trong danh sách cố định, nhận số liệu CPU/RAM/tiến trình,
+dung lượng, startup và AppX khi phù hợp, rồi giải thích bằng các mã bằng chứng.
+Hướng dẫn Microsoft được truy xuất từ bộ kiến thức nhỏ bằng từ khóa; nhóm không
+tuyên bố tự huấn luyện model. Kết quả là tư vấn, không phải chứng nhận ứng dụng
+an toàn để gỡ hay bằng chứng máy sẽ nhanh hơn.
+
+Các hành động không được chọn sẵn. Anh/chị chọn từng mục và xác nhận trước khi
+chạy. AI chỉ được đề xuất mở công cụ, tắt một số mục khởi động của người dùng,
+gỡ AppX trong danh sách được phép hoặc dọn hai nhóm tệp tạm. Mã hành động được
+kiểm tra lại và thao tác đi qua `OperationRunner`; AI không được chạy lệnh tùy ý.
+Đo lại CPU/RAM và xuất báo cáo JSON giúp đối chiếu quan sát trước/sau, không chứng
+minh quan hệ nhân quả. Xóa tệp và gỡ ứng dụng không có hoàn tác tự động.
+
+### Chạy AI cục bộ
+
+Windows x64; cần dung lượng cho runtime và model (riêng `qwen3:4b` khoảng 2,5 GB).
+Chạy trong thư mục kho mã; helper đặt runtime, model, profile và cache ngay trong
+`fasterLegit/.tools/ollama` trên ổ đĩa chứa dự án:
+
+```powershell
+.\fasterLegit\local-ai.ps1 install
+.\fasterLegit\local-ai.ps1 serve
+.\fasterLegit\local-ai.ps1 pull
+.\fasterLegit\local-ai.ps1 status
+```
+
+Trong **VELORA AI → Thiết lập AI**, chọn Ollama, endpoint
+`http://127.0.0.1:11434`, model `qwen3:4b`, lưu rồi kiểm tra kết nối.
+Cần Internet khi tải runtime/model lần đầu. Suy luận cục bộ dùng model đã tải;
+không hỗ trợ model Ollama có hậu tố cloud. Máy cấu hình yếu có thể phản hồi chậm.
+
+### Dùng API
+
+Chọn API tương thích OpenAI, nhập URL cơ sở (ví dụ endpoint của nhà cung cấp có
+`/v1`), model và khóa của chính người dùng. API phải hỗ trợ Chat Completions và
+JSON mode. Lưu cấu hình rồi kiểm tra kết nối. HTTPS được yêu cầu, trừ máy chủ
+loopback. Khóa được bảo vệ bằng Windows DPAPI theo tài khoản hiện tại, không
+ghi vào JSON cấu hình hay báo cáo. Không đưa khóa vào kho mã.
+
+Trước khi phân tích qua API, người dùng phải đồng ý gửi câu hỏi, mục tiêu,
+ngữ cảnh hội thoại và bằng chứng hệ thống cho endpoint đã chọn. Không nhập dữ
+liệu bí mật; phí và chính sách dữ liệu phụ thuộc nhà cung cấp. Giao thức API đã
+được kiểm thử bằng máy chủ giả lập; chưa xác minh với nhà cung cấp thực do chưa
+cấu hình khóa. Ollama `qwen3:4b` đã chạy kiểm tra thực tế cả ba chế độ, chỉ đọc.
+
+Xem [hướng dẫn và giới hạn AI](fasterLegit/Docs/AI_ADVISOR.md) và
+[bản thuyết minh Word](fasterLegit/Docs/VELORA.docx).
 
 ## Cách sử dụng
 
@@ -95,6 +149,8 @@ Chạy kiểm thử từ terminal quản trị viên trên máy thử nghiệm:
 
 - [Nguồn gốc, tác giả và phạm vi đóng góp](ATTRIBUTION.md)
 - [Kịch bản trình diễn](fasterLegit/DEMO.md)
+- [Hướng dẫn AI và giới hạn kiểm tra](fasterLegit/Docs/AI_ADVISOR.md)
+- [Thuyết minh VELORA của HIT Anyone'sLegend](fasterLegit/Docs/VELORA.docx)
 - [Quy chuẩn giao diện](DESIGN.md)
 - [Luồng xử lý](fasterLegit/FLOW_VA_CO_CHE_TOI_UU_HOA.md)
 - [Hướng dẫn phát triển](CONTRIBUTING.md)

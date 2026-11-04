@@ -2596,4 +2596,99 @@ Update now to enjoy the latest features, improvements, and bug fixes.</value>
     <value>Review each change, check its risk and apply only what fits your system.</value>
   </data>
   <data name="Brand.AppDetails" xml:space="preserve"><value>Package details</value></data>
+  <data name="AI.Navigation" xml:space="preserve"><value>VELORA AI</value></data>
+  <data name="AI.Title" xml:space="preserve"><value>Your PC, explained.</value></data>
+  <data name="AI.Description" xml:space="preserve"><value>Describe a symptom, review measured evidence and choose your next steps.</value></data>
+  <data name="AI.Settings.Title" xml:space="preserve"><value>AI settings</value></data>
+  <data name="AI.Settings.Description" xml:space="preserve"><value>Choose local Ollama or a compatible API, configure the model and private key.</value></data>
+  <data name="AI.Settings.Provider" xml:space="preserve"><value>AI connection</value></data>
+  <data name="AI.Settings.Local" xml:space="preserve"><value>Local model · Ollama</value></data>
+  <data name="AI.Settings.Api" xml:space="preserve"><value>Compatible API</value></data>
+  <data name="AI.Settings.Sample" xml:space="preserve"><value>Observation duration (5–60 seconds)</value></data>
+  <data name="AI.Settings.LocalEndpoint" xml:space="preserve"><value>Local Ollama address</value></data>
+  <data name="AI.Settings.LocalModel" xml:space="preserve"><value>Local model name</value></data>
+  <data name="AI.Settings.ApiEndpoint" xml:space="preserve"><value>API base URL (including /v1 when needed)</value></data>
+  <data name="AI.Settings.ApiModel" xml:space="preserve"><value>API model name</value></data>
+  <data name="AI.Settings.Key" xml:space="preserve"><value>New API key (leave blank to keep the saved key)</value></data>
+  <data name="AI.Settings.KeyHint" xml:space="preserve"><value>The key is encrypted for this Windows user, stored separately from settings and excluded from source control.</value></data>
+  <data name="AI.Settings.Save" xml:space="preserve"><value>Save configuration</value></data>
+  <data name="AI.Settings.Test" xml:space="preserve"><value>Test saved connection</value></data>
+  <data name="AI.Settings.ClearKey" xml:space="preserve"><value>Remove saved key</value></data>
+  <data name="AI.Settings.LocalHint" xml:space="preserve"><value>For local mode, start Ollama and pull the selected model. Use local-ai.ps1 to keep runtime and models beside the project. Configuration, keys and exported AI reports live in UserData/Advisor beside the executable.</value></data>
+  <data name="AI.Settings.Saved" xml:space="preserve"><value>Configuration saved. Confirm remote-data sharing again before using an API.</value></data>
+  <data name="AI.Settings.KeyCleared" xml:space="preserve"><value>Saved API key removed.</value></data>
+  <data name="AI.Settings.Connected" xml:space="preserve"><value>Connected to model {0}.</value></data>
+  <data name="AI.Mode.Title" xml:space="preserve"><value>What would you like help with?</value></data>
+  <data name="AI.Mode.Diagnose" xml:space="preserve"><value>Investigate a symptom</value></data>
+  <data name="AI.Mode.Applications" xml:space="preserve"><value>Review app removal</value></data>
+  <data name="AI.Mode.Maintenance" xml:space="preserve"><value>Plan maintenance</value></data>
+  <data name="AI.Question" xml:space="preserve"><value>Describe the issue or app</value></data>
+  <data name="AI.Question.Hint" xml:space="preserve"><value>For example: the PC stutters with my browser and editor open.</value></data>
+  <data name="AI.Goal" xml:space="preserve"><value>Your needs and what you want to keep</value></data>
+  <data name="AI.Goal.Hint" xml:space="preserve"><value>For example: studying, video calls; keep my notes and sync apps.</value></data>
+  <data name="AI.Consent" xml:space="preserve"><value>Allow this request to send my question, sampled metrics, selected process/app names and startup metadata to the configured API.</value></data>
+  <data name="AI.Analyze" xml:space="preserve"><value>Analyze</value></data>
+  <data name="AI.ClearConversation" xml:space="preserve"><value>New conversation</value></data>
+  <data name="AI.PrivacyHint" xml:space="preserve"><value>Local mode uses a loopback Ollama server. API mode requires consent. No document contents, usernames or full file paths are collected. Reports are saved only when you choose Save report.</value></data>
+  <data name="AI.Empty.Title" xml:space="preserve"><value>Start with what you notice.</value></data>
+  <data name="AI.Empty.Description" xml:space="preserve"><value>AI can ask a follow-up, choose read-only checks and explain observations. A high reading alone does not prove a cause. Configure a model above before the first request.</value></data>
+  <data name="AI.Evidence.Title" xml:space="preserve"><value>View evidence and reference sources</value></data>
+  <data name="AI.Actions.Title" xml:space="preserve"><value>Review the proposed plan</value></data>
+  <data name="AI.Actions.Hint" xml:space="preserve"><value>Nothing is selected automatically. Read each consequence; review actions open the existing tool. Changes require another confirmation.</value></data>
+  <data name="AI.Actions.Execute" xml:space="preserve"><value>Review selected actions</value></data>
+  <data name="AI.Recheck" xml:space="preserve"><value>Measure again</value></data>
+  <data name="AI.SaveReport" xml:space="preserve"><value>Save report</value></data>
+  <data name="AI.Confirm.Title" xml:space="preserve"><value>Confirm the selected plan</value></data>
+  <data name="AI.Confirm.Body" xml:space="preserve"><value>Only the listed actions will run. App removal and file cleanup can permanently remove data. AI actions do not save automatic undo; disabled startup entries can be re-enabled manually in Startup control. Back up important data before proceeding.</value></data>
+  <data name="AI.Confirm.Apply" xml:space="preserve"><value>Confirm and run</value></data>
+  <data name="AI.Progress.Plan" xml:space="preserve"><value>Choosing read-only checks…</value></data>
+  <data name="AI.Progress.Explain" xml:space="preserve"><value>Explaining observations and preparing a plan…</value></data>
+  <data name="AI.Progress.Execute" xml:space="preserve"><value>Executing the confirmed plan…</value></data>
+  <data name="AI.Progress.Recheck" xml:space="preserve"><value>Measuring again. Keep a comparable workload.</value></data>
+  <data name="AI.Tool.measure_resources" xml:space="preserve"><value>Observing CPU, memory and process usage…</value></data>
+  <data name="AI.Tool.inspect_storage" xml:space="preserve"><value>Reading drive capacity…</value></data>
+  <data name="AI.Tool.inspect_startup" xml:space="preserve"><value>Inspecting startup entries…</value></data>
+  <data name="AI.Tool.inspect_apps" xml:space="preserve"><value>Inspecting removable AppX apps and readable manifests…</value></data>
+  <data name="AI.Status.Cancelled" xml:space="preserve"><value>Request cancelled. Completed changes, if any, remain recorded.</value></data>
+  <data name="AI.Status.Done" xml:space="preserve"><value>Model: {0} · read-only tools used: {1}</value></data>
+  <data name="AI.Status.Rechecked" xml:space="preserve"><value>Comparison ready. Different workloads can change the result.</value></data>
+  <data name="AI.Status.SavedReport" xml:space="preserve"><value>Report saved to the path below.</value></data>
+  <data name="AI.Comparison" xml:space="preserve"><value>CPU average: {0} → {1}; memory average: {2} → {3}. Observation windows: {4}s / {5}s. This comparison does not establish causality or a guaranteed speedup.</value></data>
+  <data name="AI.Evidence.System" xml:space="preserve"><value>Machine configuration</value></data>
+  <data name="AI.Evidence.Resources" xml:space="preserve"><value>Observed resource usage</value></data>
+  <data name="AI.Evidence.Storage" xml:space="preserve"><value>Drive capacity</value></data>
+  <data name="AI.Evidence.Startup" xml:space="preserve"><value>Startup inventory</value></data>
+  <data name="AI.Evidence.AppScope" xml:space="preserve"><value>Application inventory scope</value></data>
+  <data name="AI.Action.Cleanup" xml:space="preserve"><value>Clean temporary files: {0}</value></data>
+  <data name="AI.Action.Cleanup.Detail" xml:space="preserve"><value>Review before confirming. Uses the existing temporary-file cleaner; deletion cannot be undone and some files may be skipped.</value></data>
+  <data name="AI.Action.Startup" xml:space="preserve"><value>Disable startup: {0}</value></data>
+  <data name="AI.Action.Startup.Detail" xml:space="preserve"><value>Changes a supported current-user startup entry. Does not stop a running app. No automatic undo is saved; re-enable it manually in Startup control if needed.</value></data>
+  <data name="AI.Action.Remove" xml:space="preserve"><value>Remove app: {0}</value></data>
+  <data name="AI.Action.Remove.Detail" xml:space="preserve"><value>Removes the current-user AppX app, not the provisioned copy for new users. App data may be lost; back it up. Reinstallation and data recovery are not guaranteed.</value></data>
+  <data name="AI.Action.ReviewStartup" xml:space="preserve"><value>Open Startup control</value></data>
+  <data name="AI.Action.ReviewApps" xml:space="preserve"><value>Open the app library</value></data>
+  <data name="AI.Action.ReviewCleanup" xml:space="preserve"><value>Open Storage cleanup</value></data>
+  <data name="AI.Action.ReviewOptimizations" xml:space="preserve"><value>Review system tuning options</value></data>
+  <data name="AI.Action.Review.Detail" xml:space="preserve"><value>Opens the existing tool for your review; no system change is applied by this navigation.</value></data>
+  <data name="AI.Execution.Opened" xml:space="preserve"><value>Tool opened for review.</value></data>
+  <data name="AI.Execution.Nothing" xml:space="preserve"><value>No change recorded: empty target, locked files or Windows refused the action.</value></data>
+  <data name="AI.Execution.Freed" xml:space="preserve"><value>Deleted {0} bytes. File deletion cannot be undone.</value></data>
+  <data name="AI.Execution.Completed" xml:space="preserve"><value>Completed successfully: {0}/{1}. Review individual outcomes and the operation history.</value></data>
+  <data name="AI.Error.Settings" xml:space="preserve"><value>Choose a valid provider and observation duration from 5 to 60 seconds.</value></data>
+  <data name="AI.Error.Model" xml:space="preserve"><value>Enter the exact model name, then save configuration.</value></data>
+  <data name="AI.Error.Endpoint" xml:space="preserve"><value>Enter a valid API base URL. HTTPS is required except for loopback addresses; credentials and query strings do not belong in this URL.</value></data>
+  <data name="AI.Error.LocalOnly" xml:space="preserve"><value>Local mode only accepts a loopback server and a local model, not a :cloud model.</value></data>
+  <data name="AI.Error.Key" xml:space="preserve"><value>Save an API key before connecting to the API.</value></data>
+  <data name="AI.Error.Http" xml:space="preserve"><value>The model server rejected this request. Check the saved endpoint, model, key and provider API compatibility.</value></data>
+  <data name="AI.Error.Response" xml:space="preserve"><value>The model returned an invalid report or unsupported evidence/action IDs. No proposed change was executed. Try again or choose a stronger model.</value></data>
+  <data name="AI.Error.Tool" xml:space="preserve"><value>The model requested an unsupported check. Only built-in read-only checks are allowed.</value></data>
+  <data name="AI.Error.Question" xml:space="preserve"><value>Describe your question (up to 4,000 characters) and keep the goal within 2,000 characters.</value></data>
+  <data name="AI.Error.Consent" xml:space="preserve"><value>Allow remote-data sharing before using the configured API, or switch to local mode.</value></data>
+  <data name="AI.Error.Measurement" xml:space="preserve"><value>Resource measurements are unavailable. Try again after the system has settled.</value></data>
+  <data name="AI.Error.Action" xml:space="preserve"><value>The selected action does not belong to this validated plan. Analyze again.</value></data>
+  <data name="AI.Error.StaleAction" xml:space="preserve"><value>This plan is stale or the target changed. Analyze again before applying changes.</value></data>
+  <data name="AI.Error.Verify" xml:space="preserve"><value>Windows did not confirm the requested result. Review the target in the existing tool.</value></data>
+  <data name="AI.Error.General" xml:space="preserve"><value>Cannot complete the AI request. Check the saved settings, local model/server or network connection. Your API key is never included in error details.</value></data>
+  <data name="AI.Error.Unsaved" xml:space="preserve"><value>Save changed AI settings before sending a request.</value></data>
+  <data name="AI.Report.Limits" xml:space="preserve"><value>AI can misinterpret evidence. This check does not measure temperature, GPU load, battery health or diagnose hardware faults. Verify the cited values before acting.</value></data>
 </root>

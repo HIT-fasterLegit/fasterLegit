@@ -1,91 +1,44 @@
-# Privacy Policy
+# Quyền riêng tư của VELORA
 
-**Last Updated:** November 5, 2026
+Cập nhật: 05/11/2026. Nhóm phát triển bản sửa đổi: HIT Anyone'sLegend.
+VELORA kế thừa optimizerDuck của fatDuck theo GPL v3; xem [ATTRIBUTION](ATTRIBUTION.md).
 
-VELORA derives its ideas and source code from
-[optimizerDuck](https://github.com/itsfatduck/optimizerDuck) by fatDuck
-(`itsfatduck`) and its contributors, under GNU GPL v3. This document describes
-the VELORA derivative; see [ATTRIBUTION.md](ATTRIBUTION.md) for authorship and
-the distinction between inherited work and VELORA modifications.
+## Công cụ Windows và AI cục bộ
 
-> [!TIP]
-> **TL;DR: VELORA does not collect, track, or transmit your personal data. Everything runs locally on your machine.**
+Các công cụ bảo trì thực hiện trên máy. Không bổ sung analytics hay gửi báo cáo
+lỗi tự động. AI Ollama kết nối endpoint loopback do người dùng cấu hình; helper
+cục bộ đặt runtime, model, profile và tệp tạm trong thư mục dự án. Cần Internet
+khi tải runtime/model. Các công cụ tải tài nguyên theo yêu cầu vẫn có thể dùng
+mạng. Không nên suy diễn rằng mọi chức năng của ứng dụng luôn ngoại tuyến.
 
----
+## AI qua API là lựa chọn của người dùng
 
-## Our Commitment
+Khi chọn API, người dùng cấu hình endpoint/model/khóa riêng và phải đồng ý trước
+khi phân tích. Câu hỏi, mục tiêu, ngữ cảnh hội thoại gần đây và bằng chứng được
+gửi tới endpoint đó. Bằng chứng có thể gồm cấu hình Windows/phần cứng, CPU/RAM,
+tên tiến trình, dung lượng ổ, tên/nhà phát hành startup, AppX và phụ thuộc đọc
+được. Không gửi nội dung tài liệu cá nhân hay lệnh/đường dẫn startup thô. Không
+nhập mật khẩu hoặc bí mật vào câu hỏi. Tên phần mềm và nội dung tự nhập vẫn có
+thể nhạy cảm. Nhà cung cấp có thể nhìn thấy địa chỉ IP và giữ dữ liệu theo chính
+sách riêng; VELORA không kiểm soát việc lưu trữ tại endpoint của người dùng.
 
-**VELORA respects your privacy. Period.**
+Nút kiểm tra kết nối gửi lời chào kiểm tra, không thu thập bằng chứng hệ thống.
+HTTPS được yêu cầu trừ loopback; chuyển hướng HTTP bị tắt. API có thể phát sinh
+chi phí theo tài khoản người dùng. Không có endpoint hay khóa cloud dùng chung.
 
-We believe system optimization tools should improve your PC without compromising your data. This Privacy Policy explains what information is (and is not) handled by the Application.
+## Dữ liệu lưu trên máy
 
----
+AI lưu settings.json và key.bin tại `UserData/Advisor` cạnh EXE. Khóa được bảo vệ
+bằng Windows DPAPI theo tài khoản hiện tại và có thể xóa trong thiết lập; khóa
+không nằm trong JSON hay báo cáo. Bảo vệ này không chống được phần mềm độc hại
+chạy dưới cùng tài khoản. Hội thoại chỉ giữ trong bộ nhớ, có nút xóa.
 
-## What We DON'T Collect
+Chỉ khi chọn lưu báo cáo, ứng dụng ghi JSON vào `UserData/Advisor/Reports`.
+Báo cáo chứa diễn giải, bằng chứng, hành động, kết quả thực hiện và số đo trước/
+sau nếu có; người dùng có thể xóa bằng File Explorer khi không cần. Không tự
+đồng bộ hay tải báo cáo lên máy chủ. Kiểm tra nội dung trước khi chia sẻ.
 
-Under normal operation, VELORA does **not collect, store, or transmit** any of the following:
-
-| Category                    | Status          |
-| --------------------------- | --------------- |
-| 🚫 **Personal Information** | Not collected   |
-| 🚫 **Telemetry**            | None            |
-| 🚫 **Analytics**            | No tracking     |
-| 🚫 **Advertisements**       | No ads          |
-| 🚫 **Crash Reports**        | Not transmitted |
-| 🚫 **Usage Statistics**     | Not collected   |
-| 🚫 **Hardware IDs**         | Not collected   |
-| 🚫 **IP Addresses**         | Not logged      |
-| 🚫 **Cookies**              | None            |
-| 🚫 **Third-Party Trackers** | None            |
-
-**The Application does not communicate with external servers during normal operation.**
-
----
-
-## What Happens on Your Machine
-
-VELORA runs **entirely locally** on your Windows system:
-
-- 🔧 Optimizations are applied directly to your local system (e.g., registry and settings)
-- 💾 Configuration data is stored locally on your device
-- 🔄 No data is sent to us or any third party
-- 🌐 An internet connection is not required for core functionality. Exceptions may apply for specific optimizations that require online resources.
-
----
-
-## Open Source Transparency
-
-The source code of VELORA is publicly available:
-
-- 🔍 Anyone can audit the code
-- 🔍 No hidden data collection mechanisms
-- 🔍 No undisclosed network communication
-- 🔍 What you see is what you get
-
-We encourage independent verification. If you discover any issues or concerns, please open an issue on GitHub.
-
----
-
-## Third-Party Services
-
-The Application itself does not rely on third-party services. However, external platforms associated with the project may have their own privacy practices:
-
-- 📥 **GitHub**: Downloading the Application is subject to GitHub's Privacy Policy
-- 💬 **Discord**: Community interactions are subject to Discord's Privacy Policy
-- 🌐 **Website**: Visiting the project website is subject to that site's policies
-
-These services are independent and not controlled by VELORA.
-
----
-
-## Changes to This Policy
-
-This Privacy Policy may be updated from time to time. Updates will be reflected by the "Last Updated" date at the top of this document.
-
----
-
-## Contact
-
-For any privacy-related questions:
-
-Contact the team responsible for this VELORA demonstration build.
+Dữ liệu nền kế thừa như lịch sử thao tác, hoàn tác, log và thiết lập Windows vẫn
+dùng đường dẫn dữ liệu đã có của ứng dụng; vị trí AI portable không di chuyển
+toàn bộ dữ liệu cũ. `UserData`, model, runtime tải về và cache bị loại khỏi Git.
+Để trao đổi về chính sách, liên hệ nhóm HIT Anyone'sLegend qua kho mã VELORA.
